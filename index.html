@@ -5,10 +5,11 @@
     <title>HTML Academy: Седона</title>
   </head>
   <body>
+
   <header class="main-header">
     <a class="main-header-logo">
       <img src="img/logo.svg" width="140" height="71" alt="Логотип сайта Седона"></a>
-    <nav class="main-nav">
+    <nav class="main-nav" aria-label="Основное меню">
       <ul class="main-menu">
         <li><a href="sedona-info.html">информация</a></li>
         <li><a href="sedona-map.html">карта штата</a></li>
@@ -17,6 +18,7 @@
       </ul>
     </nav>
   </header>
+
   <main class="container">
     <h1 class="visually-hidden">Поиск жилья в Седоне</h1>
     <section class="advantages">
@@ -66,19 +68,45 @@
     <section class="search">
       <b>заинтересовались?</b>
       <p>укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
-      <h2 class="search-title">поиск гостиницы в седоне</h2>
-      <!-- ЗДЕСЬ БУДЕТ ФОРМА ПОИСКА И КАРТЫ -->
+      <h2 class="visually-hidden">поиск гостиницы в седоне</h2>
+      <button class="button hotel-search">поиск гостиницы в седоне</button>
+
+      <form class="user" method="post" action="https://echo.htmlacademy.ru">
+        <p>
+          <label>дата заезда:
+            <input type="date" name="arrival_date" placeholder="дд.мм.гггг" value="2017-04-24" required>
+          </label>
+        </p>
+        <p>
+          <label>дата выезда:
+            <input type="date" name="date_of_departure" placeholder="дд.мм.гггг" value="2017-07-04" required>
+          </label>
+        </p>
+        <p>
+          <label>взрослые:
+            <input type="number" min="1" step="1" name="adults" value="2" required>
+          </label>
+        </p>
+        <p>
+          <label>дети:
+            <input type="number" min="0" step="1" name="children" value="0" required>
+          </label>
+        </p>
+        <button type="submit" class="button">найти</button>
+      </form>
+
     </section>
   </main>
+
   <footer>
     <p class="footer-contact">
       <a href="">#visitsedona</a>
     </p>
     <div class="footer-social">
           <ul>
-            <li><a class="social-button" target="_blank" href="#">Твиттер</a></li>
-            <li><a class="social-button" target="_blank" href="#">Фейсбук</a></li>
-            <li><a class="social-button" target="_blank" href="#">Ютуб</a></li>
+            <li><a class="social-button" target="_blank" href="#" aria-label="О Седоне в Твиттере">Твиттер</a></li>
+            <li><a class="social-button" target="_blank" href="#" aria-label="О Седоне на Фейсбуке">Фейсбук</a></li>
+            <li><a class="social-button" target="_blank" href="#" aria-label="О Седоне на Ютубе">Ютуб</a></li>
           </ul>
         </div>
         <p class="footer-copyright">
