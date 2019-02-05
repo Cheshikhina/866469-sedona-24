@@ -9,7 +9,7 @@
   <header class="main-header">
     <a class="main-header-logo">
       <img src="img/logo.svg" width="140" height="71" alt="Логотип сайта Седона"></a>
-    <nav class="main-nav" aria-label="Основное меню">
+    <nav class="main-nav">
       <ul class="main-menu">
         <li><a href="sedona-info.html">информация</a></li>
         <li><a href="sedona-map.html">карта штата</a></li>
@@ -66,31 +66,33 @@
       </ul>
     </section>
     <section class="search">
+      <h2 class="visually-hidden">поиск гостиницы в седоне</h2>
       <b>заинтересовались?</b>
       <p>укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
-      <h2 class="visually-hidden">поиск гостиницы в седоне</h2>
       <button class="button hotel-search">поиск гостиницы в седоне</button>
 
       <form class="user" method="post" action="https://echo.htmlacademy.ru">
         <p>
           <label>дата заезда:
-            <input type="date" name="arrival_date" placeholder="дд.мм.гггг" value="2017-04-24" required>
+            <input type="date" name="arrival-date" placeholder="дд.мм.гггг" value="2017-04-24" required>
           </label>
         </p>
         <p>
           <label>дата выезда:
-            <input type="date" name="date_of_departure" placeholder="дд.мм.гггг" value="2017-07-04" required>
+            <input type="date" name="date-of-departure" placeholder="дд.мм.гггг" value="2017-07-04" required>
           </label>
         </p>
         <p>
-          <label>взрослые:
-            <input type="number" min="1" step="1" name="adults" value="2" required>
-          </label>
+          <label for="adults">взрослые:</label>
+          <button class="button remove-adults" aria-label="Уменьшить количество взрослых">-</button>
+          <input id="adults" type="number" min="1" step="1" name="adults" value="2" required>
+          <button class="button add-adults" aria-label="Увеличить количество взрослых">+</button>
         </p>
         <p>
-          <label>дети:
-            <input type="number" min="0" step="1" name="children" value="0" required>
-          </label>
+          <label for="children">дети:</label>
+          <button class="button remove-children" aria-label="Уменьшить количество детей">-</button>
+          <input id="children" type="number" min="1" step="1" name="children" value="2" required>
+          <button class="button add-children" aria-label="Увеличить количество детей">+</button>
         </p>
         <button type="submit" class="button">найти</button>
       </form>
@@ -103,17 +105,17 @@
       <a href="">#visitsedona</a>
     </p>
     <div class="footer-social">
-          <ul>
-            <li><a class="social-button" target="_blank" href="#" aria-label="О Седоне в Твиттере">Твиттер</a></li>
-            <li><a class="social-button" target="_blank" href="#" aria-label="О Седоне на Фейсбуке">Фейсбук</a></li>
-            <li><a class="social-button" target="_blank" href="#" aria-label="О Седоне на Ютубе">Ютуб</a></li>
-          </ul>
-        </div>
-        <p class="footer-copyright">
-          <b>website by</b>
-          <a class="button" target="_blank" href="https://htmlacademy.ru/intensive/htmlcss">
-            <img src="img/logo-name.png" width="115" height="41" alt="Логотип htmlacademy"></a>
-        </p>
+      <ul>
+        <li><a class="social-button" target="_blank" href="#">Твиттер</a></li>
+        <li><a class="social-button" target="_blank" href="#"">Фейсбук</a></li>
+        <li><a class="social-button" target="_blank" href="#"">Ютуб</a></li>
+      </ul>
+    </div>
+    <p class="footer-copyright">
+      <b>website by</b>
+      <a class="button" target="_blank" href="https://htmlacademy.ru/intensive/htmlcss">
+      <img src="img/logo-name.png" width="115" height="41" alt="Логотип htmlacademy"></a>
+    </p>
   </footer>
   </body>
 </html>
