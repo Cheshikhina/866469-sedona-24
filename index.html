@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
 
@@ -20,8 +23,13 @@
   </header>
 
   <main class="container">
-    <h1 class="visually-hidden">Поиск жилья в Седоне</h1>
+    <h1 class="vuyisually-hidden">Поиск жилья в Седоне</h1>
     <section class="advantages">
+      <div class="main-unit-1">
+        <p>седона — небольшой городок в Аризоне,
+          <br>заслуживающий большего!</p>
+        <p>рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+      </div>
       <h2 class="visually-hidden">Преимущества</h2>
       <ul class="advantages-list">
         <li class="advantages-item">
@@ -68,15 +76,16 @@
     <section class="search">
       <h2 class="visually-hidden">поиск гостиницы в седоне</h2>
       <b>заинтересовались?</b>
-      <p>укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
+      <p>укажите предполагаемые даты поездки, 
+      <br>и мы покажем вам лучшие предложения гостиниц в седоне</p>
       <button class="button hotel-search">поиск гостиницы в седоне</button>
 
       <form class="user" method="post" action="https://echo.htmlacademy.ru">
         <label>дата заезда:
-          <input type="text" name="arrival-date" placeholder="дд.мм.гггг" value="2017-04-24" required>
+          <input type="text" name="arrival-date" placeholder="дд.мм.гггг" value="24 апреля 2017" required>
         </label>
         <label>дата выезда:
-          <input type="text" name="date-of-departure" placeholder="дд.мм.гггг" value="2017-07-04" required>
+          <input type="text" name="date-of-departure" placeholder="дд.мм.гггг" value="4 июля 2017" required>
         </label>
         <p>
           <label for="adults">взрослые:</label>
@@ -90,26 +99,26 @@
           <input id="children" type="number" min="1" step="1" name="children" value="2" required>
           <button class="button add-children" aria-label="Увеличить количество детей">+</button>
         </p>
-        <button type="submit" class="button">найти</button>
+        <button type="submit" class="button search">найти</button>
       </form>
 
     </section>
   </main>
 
-  <footer>
+  <footer class="main-footer">
     <p class="footer-contact">
       <a href="">#visitsedona</a>
     </p>
     <div class="footer-social">
       <ul>
-        <li><a class="social-button" target="_blank" href="#">Твиттер</a></li>
-        <li><a class="social-button" target="_blank" href="#">Фейсбук</a></li>
-        <li><a class="social-button" target="_blank" href="#">Ютуб</a></li>
+        <li><a class="social-button twitter" target="_blank" href="#">Твиттер</a></li>
+        <li><a class="social-button facebook" target="_blank" href="#">Фейсбук</a></li>
+        <li><a class="social-button youtube" target="_blank" href="#">Ютуб</a></li>
       </ul>
     </div>
     <p class="footer-copyright">
       <b>website by</b>
-      <a class="button" target="_blank" href="https://htmlacademy.ru/intensive/htmlcss">
+      <a class="logo-button" target="_blank" href="https://htmlacademy.ru/intensive/htmlcss">
       <img src="img/logo-name.png" width="115" height="41" alt="Логотип htmlacademy"></a>
     </p>
   </footer>

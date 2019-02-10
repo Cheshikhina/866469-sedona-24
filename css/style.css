@@ -1,0 +1,337 @@
+body {
+  margin: 0;
+  
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 700;
+  color: #000000;
+  text-align: center;
+  text-transform: uppercase;
+  
+  background-color: #ffffff;
+  background-image: url("../img/welcome-background-main.png"),
+  url("../img/background-main.jpg");
+  background-position: center 132px, top center;
+  background-repeat: no-repeat;
+}
+
+.inner-page {
+  color: #000000;
+
+  background-color: #ffffff;
+  background-image: url("../img/background-hotels.jpg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+  
+a {
+  text-decoration: none;
+}
+
+/* url("../img/polygon-background-main.svg") */
+
+.main-nav {
+  font-size: 14px;
+  line-height: 26px;
+  font-family: "PT Sans Bold", Arial, sans-serif;
+  color: #000000;
+  
+  background-color: #ffffff;
+}
+
+.main-menu {
+  list-style: none;
+}
+  
+.main-nav a {
+  color: #000000;
+}
+
+.main-nav a:hover,
+.main-nav a:focus {
+  color: #81b3d2;
+}
+
+.main-nav a:active, {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.advantages h3,
+.offering h3 {
+  font-size: 21px;
+  font-family: "PT Sans Bold", Arial, sans-serif;
+}
+
+.advantages p,
+.offering p {
+  font-size: 14px;
+  color: #333333; 
+}
+
+.main-unit-1 {
+  background-color: #ffffff;  
+}
+
+.main-unit-1 p {
+  font-size: 14px;
+  line-height: 26px;
+
+  background-color: #ffffff;  
+}
+
+.main-unit-1 p:first-child {
+  font-size: 21px;
+  font-family: "PT Sans Bold", Arial, sans-serif;
+  color: #000000;
+}
+
+.advantages-list,
+.offering-list {
+  list-style: none;
+}
+
+.advantages-list {
+  background-color: #eeeeee;
+}
+
+/* и еще не понимаю как добавить красивые номера -№1- и т.д. */
+
+.advantages-list li:first-child,
+.advantages-list li:nth-child(2) {
+  color: #ffffff;
+
+  background-color: #81b3d2;
+}
+
+/* не могу догадаться как p-шки сделать белыми */
+
+.offering-list li:nth-child(1) {
+  background-image: url("../img/icon-1.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.offering-list li:nth-child(2) {
+  background-image: url("../img/icon-2.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.offering-list li:nth-child(3) {
+  background-image: url("../img/icon-3.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.search b {
+  font-family: "PT Sans Bold", Arial, sans-serif;
+  font-size: 30px;
+  line-height: 36px;
+}
+
+.search p {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.button {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 21px;
+  line-height: 26px;
+  text-align: center;
+  color: #ffffff;
+  vertical-align: middle;
+  text-transform: uppercase;
+
+  background-color: #81b3d2;
+  border: none;
+}
+
+.search button:hover,
+.search button:focus {
+  background-color: #669ec0;
+}
+
+.hotel-search {
+  background-color: #766357;
+}
+
+/*выделение по коричневому (поиск гостиниц) не проходт */
+
+.hotel-search button:hover,
+.hotel-search button:focus {
+  background-color: #604e43;
+}
+
+.remove-adults,
+.add-adults,
+.remove-children,
+.add-children {
+  color: rgba(0, 0, 0, 0.3);
+
+  background-color: #f2f2f2;
+}
+
+.user label {
+  font-family: "PT Sans Bold", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 26px;
+}
+
+input {
+  background-color: #f2f2f2;
+  border: none;
+}
+
+.user input:nth-child(1),
+.user input:nth-child(2) {
+  background-image: url("../img/calendar.svg");
+  background-position: right;
+  background-repeat: no-repeat;
+}
+
+.main-footer {
+background-image: url("../img/map.jpg");
+background-position: 0 0;
+background-repeat: repeat;
+}
+
+.footer-contact a {
+  font-family: "PT Sans Bold", Arial, sans-serif;
+  font-size: 21px;
+  line-height: 26px;
+  color: #000000;
+
+  background-color: #ffffff;
+}
+
+.main-nav a:hover,
+.main-nav a:focus {
+  color: #81b3d2;
+}
+
+.main-nav a:active, {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.footer-social li {
+  list-style: none;
+}
+
+.social-button {
+  background-color: #81b3d2;
+}
+
+.twitter {
+  background-image: url("../img/twitter.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.facebook {
+  background-image: url("../img/facebook.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.youtube {
+  background-image: url("../img/youtube.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.footer-copyright {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 26px;
+  text-align: center;
+}
+
+.hotels-filter {
+  color: #ffffff;
+
+  background-color: rgba(0, 1, 1, 0.2);
+}
+
+.hotels-filter legend{
+font-family: "PT Sans Bold", Arial, sans-serif;
+font-size: 16px;
+}
+
+.hotels-filter li,
+.hotels-sorting li,
+.hotels li {
+  list-style: none;
+}
+
+.fieldset-unit-1,
+.button-show {
+  background-color: rgba(0, 1, 1, 0.2);
+  border: 2px solid #ffffff;
+}
+
+/* не пойму как внутри input и кнопки показать сделать прозрачный фон*/
+
+.button-show {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.hotels-sorting {
+  background-color: #ffffff;
+}
+
+.sorting-result,
+.hotels-name h3 {
+  font-family: "PT Sans Bold", Arial, sans-serif;
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.sorting-list {
+  font-family: "PT Sans Bold", Arial, sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.sorting-list a {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.sorting-list a:hover,
+.sorting-list a:focus {
+  color: #81b3d2;
+}
+
+.hotels-type,
+.hotels-price {
+  color: #333333;
+}
+
+.hotels-rank {
+  color: #666666;
+
+  background-color: #f2f2f2;
+}
+
+.hotels-details,
+.hotels-book {
+  font-family: "PT Sans Bold", Arial, sans-serif;
+  color: #ffffff;
+}
+
+.hotels-details {
+  background-color: #81b3d2;
+}
+
+.hotels-book {
+  background-color: #766357;
+}
+
+/* еще нужно вставить звездочки */
