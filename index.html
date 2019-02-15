@@ -23,21 +23,25 @@
   </header>
 
   <main class="container">
-    <h1 class="vuyisually-hidden">Поиск жилья в Седоне</h1>
+    <h1 class="visually-hidden">Поиск жилья в Седоне</h1>
+    <section class="welcome-background-main">
+      <h2 class="visually-hidden">Приветствие</h2>      
+      <img src="img/welcome-background-main.png" width="453" height="353" alt="Добро пожаловать в Седону">
+    </section>
     <section class="advantages">
       <div class="main-unit-1">
-        <p>седона — небольшой городок в Аризоне,
+        <p>седона — небольшой городок в aризоне,
           <br>заслуживающий большего!</p>
         <p>рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
       </div>
       <h2 class="visually-hidden">Преимущества</h2>
       <ul class="advantages-list">
-        <li class="advantages-item">
+        <li class="advantages-item advantages-item-blue">
           <h3>настоящий городок</h3>
           <p>седона - не аттракцион для туристов, там течет своя жизнь</p>
           <img src="img/photo_sedona.jpg" width="800" height="256" alt="Фото города Седона">
         </li>
-        <li class="advantages-item">
+        <li class="advantages-item advantages-item-blue">
           <h3>там есть мост дьявола</h3>
           <p>да, по нему можно пройти! если конечно вы осмелитесь</p>
           <img src="img/photo_devil's_bridge.jpg" width="800" height="256" alt="Фото Моста Дьявола">
@@ -62,14 +66,17 @@
         <li class="offering-item loging">
           <h3>жилье</h3>
           <p>рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+          <img src="img/icon-1.svg" width="75" height="72" alt="Иконка дома">
         </li>
         <li class="offering-item food">
           <h3>еда</h3>
           <p>всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+          <img src="img/icon-3.svg" width="74" height="70" alt="Иконка бургера">
         </li>
         <li class="offering-item souvenirs">
           <h3>сувениры</h3>
           <p>не только китайского, но и местного производства!</p>
+          <img src="img/icon-2.svg" width="64" height="76" alt="Иконка подарка">
         </li>
       </ul>
     </section>
@@ -81,25 +88,31 @@
       <button class="button hotel-search">поиск гостиницы в седоне</button>
 
       <form class="user" method="post" action="https://echo.htmlacademy.ru">
-        <label>дата заезда:
-          <input type="text" name="arrival-date" placeholder="дд.мм.гггг" value="24 апреля 2017" required>
-        </label>
-        <label>дата выезда:
-          <input type="text" name="date-of-departure" placeholder="дд.мм.гггг" value="4 июля 2017" required>
-        </label>
+        <p>
+          <label>дата заезда:
+            <input type="text" name="arrival-date" placeholder="дд.мм.гггг" value="24 апреля 2017" required>
+          </label>
+          <button class="calendar" aria-label="Открыть календарь"></button>
+        </p>
+        <p>
+          <label>дата выезда:
+            <input type="text" name="date-of-departure" placeholder="дд.мм.гггг" value="4 июля 2017" required>
+          </label>
+          <button class="calendar" aria-label="Открыть календарь"></button> 
+        </p>
         <p>
           <label for="adults">взрослые:</label>
-          <button class="button remove-adults" aria-label="Уменьшить количество взрослых">-</button>
-          <input id="adults" type="number" min="1" step="1" name="adults" value="2" required>
-          <button class="button add-adults" aria-label="Увеличить количество взрослых">+</button>
+          <button class="button remove" aria-label="Уменьшить количество взрослых">-</button>
+          <input id="adults" type="text" name="adults" value="2" required>
+          <button class="button add" aria-label="Увеличить количество взрослых">+</button>
         </p>
         <p>
           <label for="children">дети:</label>
-          <button class="button remove-children" aria-label="Уменьшить количество детей">-</button>
-          <input id="children" type="number" min="1" step="1" name="children" value="2" required>
-          <button class="button add-children" aria-label="Увеличить количество детей">+</button>
+          <button class="button remove" aria-label="Уменьшить количество детей">-</button>
+          <input id="children" type="text" name="children" value="2" required>
+          <button class="button add" aria-label="Увеличить количество детей">+</button>
         </p>
-        <button type="submit" class="button search">найти</button>
+        <button type="submit" class="button search-button">найти</button>
       </form>
 
     </section>
@@ -111,9 +124,9 @@
     </p>
     <div class="footer-social">
       <ul>
-        <li><a class="social-button twitter" target="_blank" href="#">Твиттер</a></li>
-        <li><a class="social-button facebook" target="_blank" href="#">Фейсбук</a></li>
-        <li><a class="social-button youtube" target="_blank" href="#">Ютуб</a></li>
+        <li><a class="social-button twitter" target="_blank" href="https://twitter.com/sedona">Твиттер</a></li>
+        <li><a class="social-button facebook" target="_blank" href="https://www.facebook.com/sedona">Фейсбук</a></li>
+        <li><a class="social-button youtube" target="_blank" href="https://www.youtube.com/user/sedona">Ютуб</a></li>
       </ul>
     </div>
     <p class="footer-copyright">
@@ -122,5 +135,6 @@
       <img src="img/logo-name.png" width="115" height="41" alt="Логотип htmlacademy"></a>
     </p>
   </footer>
+  
   </body>
 </html>

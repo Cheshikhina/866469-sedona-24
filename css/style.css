@@ -4,283 +4,362 @@ body {
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 14px;
   line-height: 21px;
-  font-weight: 700;
-  color: #000000;
-  text-align: center;
-  text-transform: uppercase;
-  
-  background-color: #ffffff;
-  background-image: url("../img/welcome-background-main.png"),
-  url("../img/background-main.jpg");
-  background-position: center 132px, top center;
-  background-repeat: no-repeat;
+  font-weight: 400;
 }
 
-.inner-page {
-  color: #000000;
-
-  background-color: #ffffff;
-  background-image: url("../img/background-hotels.jpg");
-  background-position: 0 0;
-  background-repeat: no-repeat;
-}
-  
 a {
+  color: #000000;
+  font-weight: 700;
   text-decoration: none;
 }
 
-/* url("../img/polygon-background-main.svg") */
+a:hover,
+a:focus {
+  color: #81b3d2;
+
+  outline: none
+}
+
+a:active, {
+  color: #c9c9c9;
+}
+
+img { 
+  max-width: 100%; 
+}
+
+html { 
+  box-sizing: border-box; 
+}
+
+*, *::before, *::after { 
+  box-sizing: inherit; 
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.main-header,
+.container,
+.main-footer,
+.hotels-filter,
+.hotels-sorting,
+.hotels,
+input,
+button {
+  text-transform: uppercase;
+}
 
 .main-nav {
-  font-size: 14px;
   line-height: 26px;
-  font-family: "PT Sans Bold", Arial, sans-serif;
-  color: #000000;
-  
-  background-color: #ffffff;
 }
 
 .main-menu {
+  padding: 0;
   list-style: none;
 }
-  
-.main-nav a {
-  color: #000000;
+ 
+.welcome-background-main {
+  background-color: #a9a9a9;
+  background-image: url("../img/background-main.jpg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
 }
 
-.main-nav a:hover,
-.main-nav a:focus {
-  color: #81b3d2;
+.welcome-background-main::before {
+  content: url("../img/polygon-background-main.svg");
 }
 
-.main-nav a:active, {
-  color: rgba(0, 0, 0, 0.3);
-}
-
-.advantages h3,
-.offering h3 {
+.container h3 {
   font-size: 21px;
-  font-family: "PT Sans Bold", Arial, sans-serif;
-}
-
-.advantages p,
-.offering p {
-  font-size: 14px;
-  color: #333333; 
-}
-
-.main-unit-1 {
-  background-color: #ffffff;  
+  font-weight: 700;
 }
 
 .main-unit-1 p {
-  font-size: 14px;
   line-height: 26px;
-
-  background-color: #ffffff;  
+  color: #333333;
 }
 
 .main-unit-1 p:first-child {
   font-size: 21px;
-  font-family: "PT Sans Bold", Arial, sans-serif;
+  font-weight: 700;
   color: #000000;
 }
 
 .advantages-list,
 .offering-list {
   list-style: none;
+  padding: 0;
+}
+
+.advantages-list p,
+.offering-list p {
+  color: #333333;
 }
 
 .advantages-list {
   background-color: #eeeeee;
 }
 
-/* и еще не понимаю как добавить красивые номера -№1- и т.д. */
-
-.advantages-list li:first-child,
-.advantages-list li:nth-child(2) {
+.advantages-item-blue,
+.advantages-item-blue p {
   color: #ffffff;
 
   background-color: #81b3d2;
 }
 
-/* не могу догадаться как p-шки сделать белыми */
-
-.offering-list li:nth-child(1) {
-  background-image: url("../img/icon-1.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.offering-list li:nth-child(2) {
-  background-image: url("../img/icon-2.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.offering-list li:nth-child(3) {
-  background-image: url("../img/icon-3.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-}
+/* нужно добавить красивые номера для li в .advantages-list */
 
 .search b {
-  font-family: "PT Sans Bold", Arial, sans-serif;
+  font-weight: 700;
   font-size: 30px;
   line-height: 36px;
 }
 
 .search p {
-  font-family: "PT Sans", Arial, sans-serif;
-  font-size: 14px;
   line-height: 24px;
+  color: #333333;
 }
 
 .button {
-  font-family: "PT Sans", Arial, sans-serif;
   font-size: 21px;
   line-height: 26px;
-  text-align: center;
+  font-weight: 700;
   color: #ffffff;
-  vertical-align: middle;
+  /* vertical-align: middle; */
   text-transform: uppercase;
 
-  background-color: #81b3d2;
   border: none;
-}
-
-.search button:hover,
-.search button:focus {
-  background-color: #669ec0;
 }
 
 .hotel-search {
   background-color: #766357;
 }
 
-/*выделение по коричневому (поиск гостиниц) не проходт */
-
-.hotel-search button:hover,
-.hotel-search button:focus {
+.hotel-search:hover,
+.hotel-search:focus {
   background-color: #604e43;
+
+  outline: none
 }
 
-.remove-adults,
-.add-adults,
-.remove-children,
-.add-children {
-  color: rgba(0, 0, 0, 0.3);
+.hotel-search:active {
+  color: rgba(255, 255, 255, 0.3);
 
-  background-color: #f2f2f2;
+  background-color: #503e33;
 }
 
-.user label {
-  font-family: "PT Sans Bold", Arial, sans-serif;
-  font-size: 14px;
+.user label,
+.user input {
   line-height: 26px;
+  font-weight: 700;
+  color: #000000;
 }
 
-input {
+.user input {
   background-color: #f2f2f2;
   border: none;
 }
 
-.user input:nth-child(1),
-.user input:nth-child(2) {
-  background-image: url("../img/calendar.svg");
-  background-position: right;
-  background-repeat: no-repeat;
+.user input:hover {
+  background-color: #ebebeb;
+}
+
+.user input:focus {
+  background-color: #ffffff;
+  outline: 2px solid #e5e5e5;
+}
+
+.calendar {
+  padding: 0;
+
+  background-color: #f2f2f2;
+  border: none; 
+  outline: none; 
+}
+
+.calendar::before {
+  content: url("../img/calendar.svg");
+}
+
+/* потом добавлю svg в html, не умею этого делать, такое чувство, что мы этого еще не проходили */
+
+.remove,
+.add {
+  font-weight: 700;
+  color: #a9a9a9;
+
+  background-color: #f2f2f2;
+  outline: none; 
+}
+
+.remove:hover,
+.add:hover {
+  color: #000000;
+
+  background-color: #ebebeb; 
+}
+
+.remove:focus,
+.add:focus
+/* ничего не нашла в стайлгайде про фокус кнопок +- */ 
+{ 
+  color: #000000;
+
+  background-color: #ffffff; 
+}
+
+.remove:active,
+.add:active {
+  color: #82b3d3;
+
+  background-color: #ffffff; 
+}
+
+.search-button {
+  background-color: #81b3d2;
+
+  outline: none;
+}
+
+.search-button:hover,
+.search-button:focus
+/* ничего не нашла в стайлгайде про фокус кнопки найти */ 
+{
+  background-color: #669ec0;
+}
+
+.search-button:active {
+  color: #95b9d1;
+
+  background-color: #5496bd; 
 }
 
 .main-footer {
-background-image: url("../img/map.jpg");
-background-position: 0 0;
-background-repeat: repeat;
+  background-image: url("../img/map.jpg");
+  background-position: 0 0;
+  background-repeat: repeat;
 }
 
 .footer-contact a {
-  font-family: "PT Sans Bold", Arial, sans-serif;
   font-size: 21px;
   line-height: 26px;
-  color: #000000;
-
-  background-color: #ffffff;
 }
 
-.main-nav a:hover,
-.main-nav a:focus {
-  color: #81b3d2;
-}
-
-.main-nav a:active, {
-  color: rgba(0, 0, 0, 0.3);
-}
-
+/* дальше косяк с ссылка соц. сетей, не могу разобраться и, прошу прощения, забыла что ты советовал про них */
 .footer-social li {
+  padding: 0;
   list-style: none;
-}
-
-.social-button {
   background-color: #81b3d2;
 }
 
 .twitter {
   background-image: url("../img/twitter.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .facebook {
   background-image: url("../img/facebook.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .youtube {
   background-image: url("../img/youtube.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
-.footer-copyright {
-  font-family: "PT Sans", Arial, sans-serif;
-  font-size: 14px;
+.twitter:hover,
+.facebook:hover,
+.youtube:hover,
+.twitter:focus,
+.facebook:focus,
+.youtube:focus 
+/* ничего не нашла в стайлгайде про фокус ссылок соц.сетей */ 
+{
+background-color: #669ec0;
+}
+
+.twitter:active,
+.facebook:active,
+.youtube:active {
+color: #95b9d1;
+
+background-color: #5496bd;
+}
+
+.footer-copyright b {
+  font-weight: 400;
   line-height: 26px;
-  text-align: center;
+}
+
+/* c логотипом тоже непонятно (((
+.logo-button:hover,
+.logo-button:focus {
+  fill: #81b3d2;
+}
+
+.logo-button:active {
+  fill: #c9c7c8;
+} */
+
+.active {
+  color: #cacaca;
 }
 
 .hotels-filter {
   color: #ffffff;
 
   background-color: rgba(0, 1, 1, 0.2);
+  background-image: url("../img/background-hotels.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.hotels-filter legend{
-font-family: "PT Sans Bold", Arial, sans-serif;
-font-size: 16px;
+fieldset {
+  border: none;
+}
+
+.hotels-filter legend {
+  font-weight: 700;
+  font-size: 16px;
 }
 
 .hotels-filter li,
 .hotels-sorting li,
 .hotels li {
+  padding: 0;
   list-style: none;
 }
 
-.fieldset-unit-1,
-.button-show {
-  background-color: rgba(0, 1, 1, 0.2);
-  border: 2px solid #ffffff;
+.fieldset-unit-1 input,
+.hotels-cost button {
+  color: #ffffff;
+
+  background-color: transparent;
+  border: none;
 }
 
-/* не пойму как внутри input и кнопки показать сделать прозрачный фон*/
+.fieldset-unit-1 input {
+  line-height: 21px;
+
+  outline: none;
+}
 
 .button-show {
-  font-family: "PT Sans", Arial, sans-serif;
-  font-size: 14px;
-  color: #ffffff;
+  outline: 2px solid #ffffff;
+}
+
+.button-show:hover,
+.button-show:focus {
+  color: #424242;
+
+  background-color: #ffffff;
+}
+
+.fieldset-unit-1 {
+  border: 2px solid #ffffff;
 }
 
 .hotels-sorting {
@@ -288,26 +367,39 @@ font-size: 16px;
 }
 
 .sorting-result,
-.hotels-name h3 {
-  font-family: "PT Sans Bold", Arial, sans-serif;
+.hotel-name {
+  font-weight: 700;
   font-size: 21px;
   line-height: 26px;
 }
 
 .sorting-list {
-  font-family: "PT Sans Bold", Arial, sans-serif;
   font-size: 12px;
   line-height: 18px;
 }
 
-.sorting-list a {
-  color: rgba(0, 0, 0, 0.3);
+.sorting-item {
+  font-weight: 400;
+  color: #cacaca;
+  border-bottom: 1px dotted #81b3d2;
 }
 
-.sorting-list a:hover,
-.sorting-list a:focus {
+.active-cost {
+  color: #81b3d2;
+  border: none;
+}
+
+.sorting-item:hover,
+.sorting-item:focus {
   color: #81b3d2;
 }
+
+.sorting-item:active {
+  color: #000000;
+  border: none;
+}
+
+/* нужно вставить треугольники */
 
 .hotels-type,
 .hotels-price {
@@ -320,18 +412,46 @@ font-size: 16px;
   background-color: #f2f2f2;
 }
 
+/* еще нужно вставить звездочки ../img/invalid-name.svg */
+
 .hotels-details,
 .hotels-book {
-  font-family: "PT Sans Bold", Arial, sans-serif;
   color: #ffffff;
 }
 
+
 .hotels-details {
   background-color: #81b3d2;
+}
+
+li .hotels-details:hover,
+li .hotels-details:focus {
+  color: #ffffff;
+
+  background-color: #669ec0;
+}
+
+li .hotels-details:active {
+  color: #95b9d1;
+
+  background-color: #5496bd; 
 }
 
 .hotels-book {
   background-color: #766357;
 }
 
-/* еще нужно вставить звездочки */
+li .hotels-book:hover,
+li .hotels-book:focus {
+  color: #ffffff;
+
+  background-color: #604e43;
+
+  outline: none
+}
+
+li .hotels-book:active {
+  color: rgba(255, 255, 255, 0.3);
+
+  background-color: #503e33;
+}
