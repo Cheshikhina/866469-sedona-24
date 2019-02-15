@@ -251,25 +251,38 @@ button {
   line-height: 26px;
 }
 
-/* дальше косяк с ссылка соц. сетей, не могу разобраться и, прошу прощения, забыла что ты советовал про них */
 .footer-social li {
   padding: 0;
   list-style: none;
-  background-color: #81b3d2;
 }
 
-.twitter {
+.twitter::before {
+  content: "";
   background-image: url("../img/twitter.svg");
 }
 
-.facebook {
+.facebook::before {
+  content: "";
   background-image: url("../img/facebook.svg");
 }
 
-.youtube {
+.youtube::before {
+  content: "";
   background-image: url("../img/youtube.svg");
 }
 
+.twitter::before,
+.facebook::before,
+.youtube::before {
+  display: inline-block;
+  width: 46px;
+  height: 48px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #81b3d2;
+}
+
+/* фокус, наведение, нажатие не работает. с учетом того, что при нажатиии сама картинка меняет цвет, это тоже контентные картинки? */
 .twitter:hover,
 .facebook:hover,
 .youtube:hover,
@@ -399,7 +412,7 @@ fieldset {
   border: none;
 }
 
-/* нужно вставить треугольники */
+/* нужно вставить треугольники и снова вопрос смены цветов при наведение и пр.*/
 
 .hotels-type,
 .hotels-price {
@@ -412,7 +425,39 @@ fieldset {
   background-color: #f2f2f2;
 }
 
-/* еще нужно вставить звездочки ../img/invalid-name.svg */
+/* звездочки */
+.hotels-resort::before {
+  content: "";
+  background-image: url("../img/invalid-name.svg");
+  display: inline-block;
+  width: 89px;
+  height: 17px;
+  background-repeat: space;
+  background-size: 18px 17px;
+  background-color: #ffffff;
+}
+
+.hotels-inn::before {
+  content: "";
+  background-image: url("../img/invalid-name.svg");
+  display: inline-block;
+  width: 64px;
+  height: 17px;
+  background-repeat: space;
+  background-size: 18px 17px;
+  background-color: #ffffff;
+}
+
+.hotels-villas::before {
+  content: "";
+  background-image: url("../img/invalid-name.svg");
+  display: inline-block;
+  width: 40px;
+  height: 17px;
+  background-repeat: space;
+  background-size: 18px 17px;
+  background-color: #ffffff;
+}
 
 .hotels-details,
 .hotels-book {
