@@ -5,8 +5,10 @@ body {
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
+  text-transform: uppercase;
 }
 
+/* определять так ссылки плохо? */
 a {
   color: #000000;
   font-weight: 700;
@@ -42,17 +44,7 @@ html {
   width: 1px;
   height: 1px;
   margin: -1px;
-}
-
-.main-header,
-.container,
-.main-footer,
-.hotels-filter,
-.hotels-sorting,
-.hotels,
-input,
-button {
-  text-transform: uppercase;
+  overflow: hidden;
 }
 
 .main-nav {
@@ -63,7 +55,14 @@ button {
   padding: 0;
   list-style: none;
 }
- 
+
+.main-menu:hover,
+.main-menu:focus {
+  color: #81b3d2;
+
+  outline: none
+}
+
 .welcome-background-main {
   background-color: #a9a9a9;
   background-image: url("../img/background-main.jpg");
@@ -131,8 +130,6 @@ button {
   line-height: 26px;
   font-weight: 700;
   color: #ffffff;
-  /* vertical-align: middle; */
-  text-transform: uppercase;
 
   border: none;
 }
@@ -206,9 +203,7 @@ button {
 }
 
 .remove:focus,
-.add:focus
-/* ничего не нашла в стайлгайде про фокус кнопок +- */ 
-{ 
+.add:focus { 
   color: #000000;
 
   background-color: #ffffff; 
@@ -228,9 +223,7 @@ button {
 }
 
 .search-button:hover,
-.search-button:focus
-/* ничего не нашла в стайлгайде про фокус кнопки найти */ 
-{
+.search-button:focus {
   background-color: #669ec0;
 }
 
@@ -283,23 +276,15 @@ button {
 }
 
 /* фокус, наведение, нажатие не работает. с учетом того, что при нажатиии сама картинка меняет цвет, это тоже контентные картинки? */
-.twitter:hover,
-.facebook:hover,
-.youtube:hover,
-.twitter:focus,
-.facebook:focus,
-.youtube:focus 
-/* ничего не нашла в стайлгайде про фокус ссылок соц.сетей */ 
-{
-background-color: #669ec0;
+.social-button:hover, 
+.social-button:focus {
+  background-color: #669ec0;
 }
 
-.twitter:active,
-.facebook:active,
-.youtube:active {
-color: #95b9d1;
+.social-button:active {
+  color: #95b9d1;
 
-background-color: #5496bd;
+  background-color: #5496bd;
 }
 
 .footer-copyright b {
@@ -425,11 +410,9 @@ fieldset {
   background-color: #f2f2f2;
 }
 
-/* звездочки */
-.hotels-resort::before {
-  content: "";
-  background-image: url("../img/invalid-name.svg");
+.star::before {
   display: inline-block;
+  vertical-align: top;
   width: 89px;
   height: 17px;
   background-repeat: space;
@@ -437,26 +420,21 @@ fieldset {
   background-color: #ffffff;
 }
 
-.hotels-inn::before {
+.star-4::before {
   content: "";
   background-image: url("../img/invalid-name.svg");
-  display: inline-block;
-  width: 64px;
-  height: 17px;
-  background-repeat: space;
-  background-size: 18px 17px;
-  background-color: #ffffff;
 }
 
-.hotels-villas::before {
+.star-3::before {
   content: "";
   background-image: url("../img/invalid-name.svg");
-  display: inline-block;
+  width: 64px;
+}
+
+.star-2::before {
+  content: "";
+  background-image: url("../img/invalid-name.svg");
   width: 40px;
-  height: 17px;
-  background-repeat: space;
-  background-size: 18px 17px;
-  background-color: #ffffff;
 }
 
 .hotels-details,
@@ -464,19 +442,18 @@ fieldset {
   color: #ffffff;
 }
 
-
 .hotels-details {
   background-color: #81b3d2;
 }
 
-li .hotels-details:hover,
-li .hotels-details:focus {
+.hotels-details:hover,
+.hotels-details:focus {
   color: #ffffff;
 
   background-color: #669ec0;
 }
 
-li .hotels-details:active {
+.hotels-details:active {
   color: #95b9d1;
 
   background-color: #5496bd; 
@@ -486,8 +463,8 @@ li .hotels-details:active {
   background-color: #766357;
 }
 
-li .hotels-book:hover,
-li .hotels-book:focus {
+.hotels-book:hover,
+.hotels-book:focus {
   color: #ffffff;
 
   background-color: #604e43;
@@ -495,7 +472,7 @@ li .hotels-book:focus {
   outline: none
 }
 
-li .hotels-book:active {
+.hotels-book:active {
   color: rgba(255, 255, 255, 0.3);
 
   background-color: #503e33;
