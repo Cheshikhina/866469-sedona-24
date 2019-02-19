@@ -14,10 +14,10 @@
       <img src="img/logo.svg" width="140" height="71" alt="Логотип сайта Седона"></a>
     <nav class="main-nav">
       <ul class="main-menu">
-        <li><a href="sedona-info.html">информация</a></li>
-        <li><a href="sedona-map.html">карта штата</a></li>
-        <li><a href="sedona-gallery.html">фото и видео</a></li>
-        <li><a href="sedona-hotels.html">гостиницы</a></li>
+        <li class="menu-list"><a href="sedona-info.html">информация</a></li>
+        <li class="menu-list"><a href="sedona-gallery.html">фото и видео</a></li>
+        <li class="menu-list"><a href="sedona-map.html">карта штата</a></li>
+        <li class="menu-list"><a href="sedona-hotels.html">гостиницы</a></li>
       </ul>
     </nav>
   </header>
@@ -36,25 +36,33 @@
       </div>
       <h2 class="visually-hidden">Преимущества</h2>
       <ul class="advantages-list">
-        <li class="advantages-item advantages-item-blue">
-          <h3>настоящий городок</h3>
-          <p>седона - не аттракцион для туристов, там течет своя жизнь</p>
-          <img src="img/photo_sedona.jpg" width="800" height="256" alt="Фото города Седона">
-        </li>
-        <li class="advantages-item advantages-item-blue">
-          <h3>там есть мост дьявола</h3>
-          <p>да, по нему можно пройти! если конечно вы осмелитесь</p>
-          <img src="img/photo_devil's_bridge.jpg" width="800" height="256" alt="Фото Моста Дьявола">
+        <li class="advantages-item">
+          <div class="advantages-item-blue advantages-item-indent">
+              <div class="advantages-item-blue-wrapper">  
+              <h3>настоящий городок</h3>
+              <p>седона - не аттракцион для туристов, там течет своя жизнь</p>
+            </div>
+            <img src="img/photo_sedona.jpg" width="800" height="256" alt="Фото города Седона">
+          </div>
         </li>
         <li class="advantages-item">
+          <div class="advantages-item-blue">
+            <img src="img/photo_devil's_bridge.jpg" width="800" height="256" class="devils-bridge" alt="Фото Моста Дьявола">
+            <div class="advantages-item-blue-wrapper">
+              <h3>там есть мост дьявола</h3>
+              <p>да, по нему можно пройти! если конечно вы осмелитесь</p>
+            </div>
+          </div>
+        </li>
+        <li class="advantages-item advantages-item-gray">
           <h3>небольшая площадь</h3>
           <p>все достопримичательности находятся очень близко</p>
         </li>
-        <li class="advantages-item">
+        <li class="advantages-item advantages-item-gray">
           <h3>красивая дорога</h3>
           <p>ехать в седону из лас-вегаса совсем не скучно!</p>
         </li>
-        <li class="advantages-item">
+        <li class="advantages-item advantages-item-gray">
           <h3>мало туристов</h3>
           <p>большинство едет в гранд каньон и толпится там</p>
         </li>
@@ -118,12 +126,12 @@
     </section>
   </main>
 
-  <footer class="main-footer">
+  <footer class="main-footer main-footer-1">
     <p class="footer-contact">
       <a href="">#visitsedona</a>
     </p>
     <div class="footer-social">
-      <ul>
+      <ul area-label="Список социальных сетей Седоны">
         <li><a class="social-button twitter" target="_blank" href="https://twitter.com/sedona" aria-label="Седона в Твиттере"></a></li>
         <li><a class="social-button facebook" target="_blank" href="https://www.facebook.com/sedona" aria-label="Седона на Фейсбуке"></a></li>
         <li><a class="social-button youtube" target="_blank" href="https://www.youtube.com/user/sedona" aria-label="Седона на Ютубе"></a></li>

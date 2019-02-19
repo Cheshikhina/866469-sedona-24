@@ -10,18 +10,18 @@
   <body class="inner-page">
     <header class="main-header">
       <a class="main-header-logo" href="index.html">
-      <img src="img/logo.svg" width="140" height="71" alt="Логотип сайта Седона"></a>
+        <img src="img/logo.svg" width="140" height="71" alt="Логотип сайта Седона"></a>
       <nav class="main-nav">
         <ul class="main-menu">
-          <li><a href="sedona-info.html">информация</a></li>
-          <li><a href="sedona-map.html">карта штата</a></li>
-          <li><a href="sedona-gallery.html">фото и видео</a></li>
-          <li><a class="active" href="sedona-hotels.html">гостиницы</a></li>
+          <li class="menu-list"><a href="sedona-info.html">информация</a></li>
+          <li class="menu-list"><a href="sedona-gallery.html">фото и видео</a></li>
+          <li class="menu-list"><a href="sedona-map.html">карта штата</a></li>
+          <li class="menu-list"><a href="sedona-hotels.html">гостиницы</a></li>
         </ul>
       </nav>
     </header>
 
-    <main>
+    <main class="container">
       <h1 class="visually-hidden">Бронирование жилья в Седоне</h1>
 
       <section class="hotels-filter">
@@ -91,35 +91,41 @@
       <section class="hotels">
         <h2 class="visually-hidden">Жилье в Седоне</h2>
         <ul class="hotels-list">
-          <li class="hotel-resort">
+          <li class="hotel-item hotel-resort">
             <h3 class="hotels-name visually-hidden">amara resort & spa</h3>
             <img src="img/photo_amara_resort_and_spa.jpg" width="135" height="90" alt="Фото amara resort and spa">
-            <a href="" class="hotel-name">amara resort & spa</a>
-            <span class="hotels-type">гостиница</span>
-            <span class="hotels-price">от 4000 р.</span>
+            <div class="hotel-item-middle">
+              <a href="" class="hotel-name">amara resort & spa</a>
+              <span class="hotels-type">гостиница</span>
+              <span class="hotels-price">от 4000 р.</span>
+              <a href="sedona-details.html" class="hotels-details">подробнее</a>
+              <a href="sedona-book.html" class="hotels-book">забронировать</a>
+            </div>
             <span class="hotels-rank star star-4">рейтинг: 8,5</span>
-            <a href="sedona-details.html" class="hotels-details">подробнее</a>
-            <a href="sedona-book.html" class="hotels-book">забронировать</a>
           </li>
-          <li class="hotel-inn">
+          <li class="hotel-item hotel-inn">
             <h3 class="hotels-name visually-hidden">desert quail inn</h3>
             <img src="img/photo_desert_quail_inn.jpg" width="135" height="90" alt="Фото DESERT QUAIL INN">
-            <a href="" class="hotel-name">desert quail inn</a>
-            <span class="hotels-type">мотель</span>
-            <span class="hotels-price">от 3000 р.</span>
+            <div class="hotel-item-middle">
+              <a href="" class="hotel-name">desert quail inn</a>
+              <span class="hotels-type">мотель</span>
+              <span class="hotels-price">от 3000 р.</span>
+              <a href="sedona-details.html" class="hotels-details">подробнее</a>
+              <a href="sedona-book.html" class="hotels-book">забронировать</a>
+            </div>
             <span class="hotels-rank star star-3">рейтинг: 8,9</span>
-            <a href="sedona-details.html" class="hotels-details">подробнее</a>
-            <a href="sedona-book.html" class="hotels-book">забронировать</a>
           </li>
-          <li class="hotel-villas">
+          <li class="hotel-item hotel-villas">
             <h3 class="hotels-name visually-hidden">villas at poco diablo</h3>
             <img src="img/photo_villas_at_poco_diablo.jpg" width="135" height="90" alt="Фото VILLAS AT POCO DIABLO">
-            <a href="" class="hotel-name">villas at poco diablo</a>
-            <span class="hotels-type">апартаменты</span>
-            <span class="hotels-price">от 2000 р.</span>
+            <div class="hotel-item-middle">
+              <a href="" class="hotel-name">villas at poco diablo</a>
+              <span class="hotels-type">апартаменты</span>
+              <span class="hotels-price">от 2000 р.</span>
+              <a href="sedona-details.html" class="hotels-details">подробнее</a>
+              <a href="sedona-book.html" class="hotels-book">забронировать</a>
+            </div>
             <span class="hotels-rank star star-2">рейтинг: 9,2</span>
-            <a href="sedona-details.html" class="hotels-details">подробнее</a>
-            <a href="sedona-book.html" class="hotels-book">забронировать</a>
           </li>
         </ul>
       </section>
