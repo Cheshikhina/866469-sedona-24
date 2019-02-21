@@ -6,9 +6,6 @@ body {
   line-height: 21px;
   font-weight: 400;
   text-transform: uppercase;
-
-  width: 1280px;
-  min-height: 2762px;
 }
 
 /* определять так ссылки плохо? */
@@ -52,12 +49,10 @@ html {
 
 .main-header {
   padding: 0 40px;
+  width: 1280px;
+  margin: 0 auto;
 
   position: relative;
-}
-
-.main-nav {
-  line-height: 26px;
 }
 
 .main-menu {
@@ -69,10 +64,10 @@ html {
 }
 
 .menu-list {
+  min-height: 56px;
   width: 20%;
-  padding-top: 15px;
-  padding-bottom: 15px;
   text-align: center;
+  line-height: 56px;
 }
 
 .menu-list:nth-child(3) {
@@ -89,8 +84,7 @@ html {
 .main-header-logo {
   display: block;
   position: absolute;
-  left: 50%; 
-  margin-left: -122px;
+  transform: translateX(200%);
   text-align: center;
 
   width: 244px;
@@ -120,6 +114,8 @@ html {
 
 .container {
   padding: 0 40px;
+  width: 1280px;
+  margin: 0 auto;
 }
 
 .container h3 {
@@ -164,26 +160,42 @@ html {
   justify-content: space-around;
 }
 
+.advantages-item:first-child {
+  order: 1;
+}
+
+.advantages-item:last-child {
+  order: 2;
+}
+
+.advantages-item:nth-child(2) {
+  order: 3;
+}
+
+.advantages-item:nth-child(3) {
+  order: 4;
+}
+
+.advantages-item:nth-child(4) {
+  order: 5;
+}
+
+.advantages-item:nth-child(5) {
+  order: 6;
+}
+
 .advantages-item-blue {
   color: #ffffff;
 
   background-color: #81b3d2;
-
-  display: flex;  
-  flex-wrap: wrap;
-  flex-direction: column;
+  display: flex;
   width: 1200px;
-  height: 256px;
 }
 
 .advantages-item-blue-wrapper {
   width: 400px;
+  min-height: 256px;
   text-align: center;
-  padding: auto 0;
-}
-
-.advantages-item-indent:last-child {
-  margin-bottom: 330px;
 }
 
 .advantages-item-blue p {
@@ -192,17 +204,8 @@ html {
 
 .advantages-item-gray {
   width: 400px;
-  height: 256px;
+  min-height: 256px;
   text-align: center;
-}
-
-/* нужно добавить красивые номера для li в .advantages-list */
-
-.offering {
-  position: absolute;
-  top: 1036px;
-  width: 1200px;
-  overflow: hidden;
 }
 
 .offering-list {
@@ -212,7 +215,16 @@ html {
 .offering-item {
   justify-content: space-around;
   width: 400px;
+  min-height: 330px;
   text-align: center;
+}
+
+/* нужно добавить красивые номера для li в .advantages-list */
+.search {
+  position: relative;
+  width: 568px;
+  margin: 0 auto;
+
 }
 
 .search b {
@@ -245,8 +257,8 @@ html {
 
 .hotel-search {
   background-color: #766357;
-
-  margin: 32px 316px 0px 316px;
+  display: block;
+  margin: 32px auto 0;
 
   width: 568px;
   height: 86px;
@@ -269,8 +281,6 @@ html {
   background-color: #ffffff;
   position: absolute;
   width: 568px;
-  min-height: 395px;
-  margin-left: 316px;
 }
 
 .user label,
@@ -372,10 +382,12 @@ html {
 
 .main-footer {
   padding: 0 40px;
+  width: 1280px;
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  align-items: center;
+  background-color: rgba(256, 256, 256, 0.9);
 }
 
 .footer-contact a {
@@ -383,9 +395,16 @@ html {
   line-height: 26px;
 }
 
+.footer-social ul {
+  display: flex;
+  width: 150px;
+}
+
 .footer-social li {
   padding: 0;
   list-style: none;
+  justify-content: space-around;
+  margin-right: 6px;
 }
 
 .twitter::before {
@@ -403,7 +422,6 @@ html {
   background-image: url("../img/youtube.svg");
 }
 
-/* не понимаю, что иконкам мешает выстроиться в строку */
 .twitter::before,
 .facebook::before,
 .youtube::before {
@@ -441,7 +459,7 @@ html {
   fill: #c9c7c8;
 } */
 
-.active {
+.menu-list-active a {
   color: #cacaca;
 }
 
@@ -530,6 +548,7 @@ fieldset {
 .sorting-list {
   font-size: 12px;
   line-height: 18px;
+  display: flex;
 }
 
 .sorting-item {
@@ -562,7 +581,6 @@ fieldset {
 
 .hotel-item {
   width: 1200px;
-  min-height: 151px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
