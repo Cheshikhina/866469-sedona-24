@@ -38,15 +38,23 @@ html {
   box-sizing: inherit; 
 }
 
-.visually-hidden {
+.visually-hidden:not(:focus):not(:active) {
   position: absolute;
-  clip: rect(0 0 0 0);
+
   width: 1px;
   height: 1px;
   margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
   overflow: hidden;
 }
 
+/* в контейнере нет position: relative, стоит ли объединять эти стили? */
 .main-header {
   padding: 0 40px;
   width: 1280px;
@@ -61,13 +69,14 @@ html {
   list-style: none;
 
   display: flex;
+  flex-wrap: wrap;
 }
 
 .menu-list {
-  min-height: 56px;
   width: 20%;
   text-align: center;
-  line-height: 56px;
+  line-height: 26px;
+  padding: 15px 0;
 }
 
 .menu-list:nth-child(3) {
@@ -84,7 +93,8 @@ html {
 .main-header-logo {
   display: block;
   position: absolute;
-  transform: translateX(200%);
+  left: 50%;
+  transform: translateX(-50%);
   text-align: center;
 
   width: 244px;
@@ -153,35 +163,45 @@ html {
 }
 
 .advantages-list {
+  margin: 0;
   background-color: #eeeeee;
   
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+
+  counter-reset: number;
+}
+
+.advantages-item h3 {
+  padding: 25px 30% 0;
+}
+
+.advantages-item p {
+  position: relative;
+  padding: 45px 15% 0;
+}
+
+.advantages-item p::before {
+  counter-increment: number; 
+  content: "— №" counter(number) " — ";
+
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%); 
 }
 
 .advantages-item:first-child {
   order: 1;
 }
 
-.advantages-item:last-child {
-  order: 2;
-}
-
-.advantages-item:nth-child(2) {
+.advantages-item:nth-child(n+2) {
   order: 3;
 }
 
-.advantages-item:nth-child(3) {
-  order: 4;
-}
-
-.advantages-item:nth-child(4) {
-  order: 5;
-}
-
-.advantages-item:nth-child(5) {
-  order: 6;
+.advantages-list .offering {
+  order: 2;
 }
 
 .advantages-item-blue {
@@ -192,7 +212,8 @@ html {
   width: 1200px;
 }
 
-.advantages-item-blue-wrapper {
+.advantages-item-blue-wrapper,
+.advantages-item-gray {
   width: 400px;
   min-height: 256px;
   text-align: center;
@@ -202,46 +223,41 @@ html {
   color: #ffffff;
 }
 
-.advantages-item-gray {
-  width: 400px;
-  min-height: 256px;
-  text-align: center;
-}
-
 .offering-list {
   display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-around;
 }
 
 .offering-item {
-  justify-content: space-around;
   width: 400px;
   min-height: 330px;
   text-align: center;
+
+  padding: 5% 5% 0;
 }
 
-/* нужно добавить красивые номера для li в .advantages-list */
 .search {
   position: relative;
   width: 568px;
   margin: 0 auto;
-
 }
 
 .search b {
   display: block;
-
+ 
+  margin: 50px auto 25px;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
   text-align: center;
-  padding-top: 36px;
-  padding-bottom: 10px;
 }
 
 .search p {
-  line-height: 24px;
+  line-height: 25px;
   color: #333333;
   text-align: center;
+  margin-bottom: 45px;
 }
 
 .button {
@@ -258,17 +274,16 @@ html {
 .hotel-search {
   background-color: #766357;
   display: block;
-  margin: 32px auto 0;
 
   width: 568px;
-  height: 86px;
+  min-height: 86px;
 }
 
 .hotel-search:hover,
 .hotel-search:focus {
   background-color: #604e43;
 
-  outline: none
+  outline: none;
 }
 
 .hotel-search:active {
@@ -281,20 +296,78 @@ html {
   background-color: #ffffff;
   position: absolute;
   width: 568px;
+  min-height: 395px;
+}
+
+.user p {
+  position: relative;
+}
+
+.user-input-fields {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 55px 55px 0;
+}
+
+.user-input-fields p {
+  display: inline-block;
+  vertical-align: baseline;
+  margin: 0 auto 30px;
+  justify-content: space-around;
 }
 
 .user label,
 .user input {
+  min-height: 38px;
+
   line-height: 26px;
   font-weight: 700;
   color: #000000;
 }
 
+.user label {
+  padding-right: 15px;
+}
+
+.user input {
+  padding-left: 15px;
+}
+
+.calendar {
+  display: inline-block;
+  vertical-align: baseline;
+  min-height: 22px;
+  border: none;
+  background-color: transparent;
+  fill: #cacaca;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-13px);
+  right: 5px;
+}
+
+.calendar:hover,
+.calendar:focus {
+  fill: #000000;
+  outline: none;
+}
+
+.calendar:active {
+  fill: #81b3d2; 
+}
+
 .user input {
   background-color: #f2f2f2;
   border: none;
+  width: 340px;
 
   text-transform: uppercase;
+}
+
+.user input:nth-child(n+3) {
+  width: 114px;
+  padding: 0;
+  text-align: center;
 }
 
 .user input:hover {
@@ -306,60 +379,50 @@ html {
   outline: 2px solid #e5e5e5;
 }
 
-.calendar {
-  padding: 0;
-
-  background-color: #f2f2f2;
-  border: none; 
-  outline: none; 
-  position: absolute;
+.user p:nth-child(n+3) {
+  flex-grow: 1;
 }
 
-.calendar::after {
-  content: url("../img/calendar.svg");
+.user p:nth-child(3) {
+  padding-left: 0;
 }
-
-/* потом добавлю svg в html, не умею этого делать, такое чувство, что мы этого еще не проходили */
 
 .remove,
 .add {
+  position: absolute;
+  background-color: transparent;
   font-weight: 700;
   color: #a9a9a9;
-
-  background-color: #f2f2f2;
+  min-height: 38px;
   outline: none; 
 }
 
-.remove:hover,
-.add:hover {
-  color: #000000;
-
-  background-color: #ebebeb; 
+.add {
+  right: 10%;
 }
 
+.remove:hover,
+.add:hover,
 .remove:focus,
-.add:focus { 
+.add:focus {
   color: #000000;
-
-  background-color: #ffffff; 
 }
 
 .remove:active,
 .add:active {
   color: #82b3d3;
-
-  background-color: #ffffff; 
 }
 
 .search-button {
+  display: block;
   background-color: #81b3d2;
 
   outline: none;
 
-  margin: 97px 55px 55px;
-
   width: 458px;
-  height: 58px;
+  min-height: 58px;
+
+  margin: 20px auto;
 }
 
 .search-button:hover,
@@ -387,77 +450,93 @@ html {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  background-color: rgba(256, 256, 256, 0.9);
+  align-items: baseline;
+  background-color: rgba(255, 255, 255, 0.9);
 }
+
+.footer-contact,
+.footer-social,
+.footer-copyright {
+  width: 30%;
+  margin-top: 20px;
+}
+
 
 .footer-contact a {
   font-size: 21px;
   line-height: 26px;
+  margin-left: 30%;
+  
 }
 
 .footer-social ul {
+  padding: 0;
   display: flex;
-  width: 150px;
+  min-width: 150px;
+  margin-left: 30%
 }
 
 .footer-social li {
-  padding: 0;
   list-style: none;
-  justify-content: space-around;
+  justify-content: center;
   margin-right: 6px;
+  ;
 }
 
-.twitter::before {
-  content: "";
-  background-image: url("../img/twitter.svg");
-}
-
-.facebook::before {
-  content: "";
-  background-image: url("../img/facebook.svg");
-}
-
-.youtube::before {
-  content: "";
-  background-image: url("../img/youtube.svg");
-}
-
-.twitter::before,
-.facebook::before,
-.youtube::before {
-  display: inline-block;
+.social-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 46px;
   height: 48px;
-  background-position: center;
-  background-repeat: no-repeat;
+
   background-color: #81b3d2;
+  outline: none;
 }
 
-/* фокус, наведение, нажатие не работает. с учетом того, что при нажатиии сама картинка меняет цвет, это тоже контентные картинки? */
 .social-button:hover, 
-.social-button:focus {
+.social-button:focus { 
   background-color: #669ec0;
 }
 
 .social-button:active {
-  color: #95b9d1;
-
   background-color: #5496bd;
+}
+
+/* при нажатии на твитер и ютуб картинка исчезает, не понимаю */
+.social-button:active path {
+  fill: rgba(255, 255, 255, 0.3);
 }
 
 .footer-copyright b {
   font-weight: 400;
   line-height: 26px;
+  vertical-align: baseline;
+  margin-left: 80px;
+  margin-right: 10px;
 }
 
-/* c логотипом тоже непонятно (((
-.logo-button:hover,
-.logo-button:focus {
+.logo-button {
+  display: inline-block;
+  vertical-align: middle;
+  background-color: transparent; 
+  width: 115px; 
+  min-height: 41px;
+  
+}
+
+/* проблема с логотипом. при наведении меняет цвет только одна буква */
+.logo-button path {
+  fill: #231f20;
+}
+
+.logo-button path:hover,
+.logo-button path:focus {
   fill: #81b3d2;
 }
-.logo-button:active {
+.logo-button path:active {
   fill: #c9c7c8;
-} */
+}
 
 .menu-list-active a {
   color: #cacaca;
@@ -499,6 +578,16 @@ fieldset {
   margin: 0;
   padding: 0;
 }
+.hotels-cost {
+  width: 330px;
+}
+.fieldset-unit-1 {
+  height: 36px;
+  margin-bottom: 20px;
+
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+}
 
 .fieldset-unit-1 input,
 .hotels-cost button {
@@ -525,10 +614,6 @@ fieldset {
   color: #424242;
 
   background-color: #ffffff;
-}
-
-.fieldset-unit-1 {
-  border: 2px solid #ffffff;
 }
 
 .hotels-sorting {
