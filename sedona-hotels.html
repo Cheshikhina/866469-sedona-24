@@ -30,16 +30,16 @@
           <fieldset class="hotels-infrastructure">
             <legend aria-label="Фильтр по инфраструктуре">инфраструктура:</legend>
             <ul class="infrastructure-list">
-              <li>
-                <input type="checkbox" name="infrastructure-pool" id="infrastructure-pool" checked>
+              <li class="filters-item">
+                <input class="visually-hidden filters-input filters-input-checkbox" type="checkbox" name="infrastructure-pool" id="infrastructure-pool" checked>
                 <label for="infrastructure-pool">бассейн</label>
               </li>
-              <li>
-                <input type="checkbox" name="infrastructure-parking" id="infrastructure-parking">
+              <li class="filters-item">
+                <input class="visually-hidden filters-input filters-input-checkbox" type="checkbox" name="infrastructure-parking" id="infrastructure-parking">
                 <label for="infrastructure-parking">парковка</label>
               </li>
-              <li>
-                <input type="checkbox" name="infrastructure-wifi" id="infrastructure-wifi">
+              <li class="filters-item">
+                <input class="visually-hidden filters-input filters-input-checkbox" type="checkbox" name="infrastructure-wifi" id="infrastructure-wifi">
                 <label for="infrastructure-wifi">wi-fi</label>
               </li>
             </ul>
@@ -47,16 +47,16 @@
           <fieldset class="hotels-type_of_housing" aria-label="Фильтр по типу жилья">
             <legend>тип жилья:</legend>
             <ul class="type-list">
-              <li>
-                <input type="checkbox" name="type_of_housing-resort" id="type_of_housing-resort" checked>
+              <li class="filters-item">
+                <input class="visually-hidden filters-input filters-input-checkbox" type="checkbox" name="type_of_housing-resort" id="type_of_housing-resort" checked>
                 <label for="type_of_housing-resort">гостиница</label>
               </li>
-              <li>
-                <input type="checkbox" name="type_of_housing-inn" id="type_of_housing-inn" checked>
+              <li class="filters-item">
+                <input class="visually-hidden filters-input filters-input-checkbox" type="checkbox" name="type_of_housing-inn" id="type_of_housing-inn" checked>
                 <label for="type_of_housing-inn">мотель</label>
               </li>
-              <li>
-                <input type="checkbox" name="type_of_housing-villas" id="type_of_housing-villas" checked>
+              <li class="filters-item">
+                <input class="visually-hidden filters-input filters-input-checkbox" type="checkbox" name="type_of_housing-villas" id="type_of_housing-villas" checked>
                 <label for="type_of_housing-villas">апартаменты</label>
               </li>
             </ul>
@@ -64,10 +64,10 @@
           <fieldset class="hotels-cost">
             <legend>стоимость в сутки(р):</legend>
             <div class="fieldset-unit-1">
-              <label>от
+              <label class="min-cost">от
                 <input type="text" name="min-cost" placeholder="0" value="0" aria-label="Поле для ввода минимальной стоимости жилья в сутки">
               </label>
-              <label>до
+              <label class="max-cost">до
                 <input type="text" name="max-cost" placeholder="3000" value="3000" aria-label="Поле для ввода максимальной стоимости жилья в сутки">
               </label>
             </div>
@@ -91,8 +91,18 @@
           <li><a href="" class="sorting-item active-cost">по цене</a></li>
           <li><a href="" class="sorting-item">по типу</a></li>
           <li><a href="" class="sorting-item">по рейтингу</a></li>
-          <li><a href="" class="sorting-item">от нижнего элемента списка сортировки к верхнему</a></li>
-          <li><a href="" class="sorting-item">от верхнего элемента списка сортировки к нижнему</a></li>
+          <li><a href="" class="sorting-item sorting-item-badge" aria-label="выстроить элементы от нижнего элемента списка сортировки к верхнему">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            width="11px" height="10px" viewBox="0 0 11 10" enable-background="new 0 0 11 10" xml:space="preserve">
+            <polygon fill="#cacaca" points="5.5,0 0,10 11,10 "/>
+            </svg>
+          </a></li>
+          <li><a href="" class="sorting-item sorting-item-badge sorting-item-active" aria-label="выстроить элементы от верхнего элемента списка сортировки к нижнему">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            width="11px" height="10px" viewBox="0 0 11 10" enable-background="new 0 0 11 10" xml:space="preserve">
+            <polyline fill="#cacaca" points="5.5,10 0,0 11,0 "/>
+            </svg>
+          </a></li>
         </ul>
       </section>
 
@@ -147,8 +157,6 @@
         <li><a class="social-button twitter" target="_blank" href="https://twitter.com/sedona" aria-label="Седона в Твиттере">
           <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
           width="17px" height="15px" viewBox="0 0 17 15" enable-background="new 0 0 17 15" xml:space="preserve">
-          <image overflow="visible" width="17" height="15" xlink:href="t.png" >
-          </image>
           <g id="W6EeEF_1_">
           <g>
           <path fill="#FFFFFF" d="M10.95,0.144c1.685-0.496,2.984,0.27,3.577,1.179c0.673-0.231,1.331-0.481,2.011-0.708
@@ -170,8 +178,6 @@
         <li><a class="social-button youtube" target="_blank" href="https://www.youtube.com/user/sedona" aria-label="Седона на Ютубе">
           <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
           width="20px" height="16px" viewBox="0 0 20 16" enable-background="new 0 0 20 16" xml:space="preserve">
-          <image overflow="visible" enable-background="new    " width="20" height="16" xlink:href="youtube.png" >
-          </image>
           <path fill="#FFFFFF" d="M17,0H3C1.35,0,0,1.35,0,3v10c0,1.65,1.35,3,3,3h14c1.65,0,3-1.35,3-3V3C20,1.35,18.65,0,17,0z
           M6.027,11.998V4.002L15.014,8L6.027,11.998z"/>
           </svg>

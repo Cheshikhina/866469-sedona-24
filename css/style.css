@@ -7,7 +7,7 @@ body {
   font-weight: 400;
   text-transform: uppercase;
 }
-
+/* фон с тенюхой пока не делала */
 /* определять так ссылки плохо? */
 a {
   color: #000000;
@@ -38,7 +38,7 @@ html {
   box-sizing: inherit; 
 }
 
-.visually-hidden:not(:focus):not(:active) {
+.visually-hidden {
   position: absolute;
 
   width: 1px;
@@ -106,7 +106,7 @@ html {
 .welcome-background-main {
   text-align: center;
   padding-top: 76px;
-  margin-bottom: 61px;
+  margin-bottom: 80px;
 
   background-color: #a9a9a9;
   background-image: url("../img/background-main.jpg");
@@ -115,11 +115,13 @@ html {
 }
 
 .welcome-background-main::after {
-  content: url("../img/polygon-background-main.svg");
+  content: "";
+  background-image: url("../img/polygon-background-main.svg");
+  background-size: 100% 100%;
   display: block;
-  padding-top: 19px;
+
   width: 1200px;
-  height: 75px;
+  height: 57px;
 }
 
 .container {
@@ -310,10 +312,10 @@ html {
 }
 
 .user-input-fields p {
-  display: inline-block;
-  vertical-align: baseline;
-  margin: 0 auto 30px;
-  justify-content: space-around;
+  margin-bottom: 30px;
+  margin-top: 0; 
+  justify-content: space-between;
+  margin-left: auto;
 }
 
 .user label,
@@ -329,21 +331,18 @@ html {
   padding-right: 15px;
 }
 
-.user input {
-  padding-left: 15px;
-}
-
 .calendar {
   display: inline-block;
   vertical-align: baseline;
-  min-height: 22px;
+  width: 21px;
+  height: 22px;
   border: none;
   background-color: transparent;
   fill: #cacaca;
   position: absolute;
   top: 50%;
   transform: translateY(-13px);
-  right: 5px;
+  right: 15px;
 }
 
 .calendar:hover,
@@ -461,26 +460,23 @@ html {
   margin-top: 20px;
 }
 
-
 .footer-contact a {
   font-size: 21px;
   line-height: 26px;
   margin-left: 30%;
-  
 }
 
 .footer-social ul {
   padding: 0;
   display: flex;
   min-width: 150px;
-  margin-left: 30%
+  margin-left: 30%;
 }
 
 .footer-social li {
   list-style: none;
   justify-content: center;
   margin-right: 6px;
-  ;
 }
 
 .social-button {
@@ -503,7 +499,6 @@ html {
   background-color: #5496bd;
 }
 
-/* при нажатии на твитер и ютуб картинка исчезает, не понимаю */
 .social-button:active path {
   fill: rgba(255, 255, 255, 0.3);
 }
@@ -522,19 +517,18 @@ html {
   background-color: transparent; 
   width: 115px; 
   min-height: 41px;
-  
 }
 
-/* проблема с логотипом. при наведении меняет цвет только одна буква */
 .logo-button path {
   fill: #231f20;
 }
 
-.logo-button path:hover,
-.logo-button path:focus {
+.logo-button:hover path,
+.logo-button:focus path {
   fill: #81b3d2;
 }
-.logo-button path:active {
+
+.logo-button:active path {
   fill: #c9c7c8;
 }
 
@@ -553,21 +547,26 @@ html {
 
 .filters {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   min-height: 217px; 
+}
+
+fieldset:nth-child(2) {
+  margin-right: 20%;
 }
 
 fieldset {
   border: none;
+  margin: 30px auto 0;
+  padding: 0;
 }
 
 .hotels-filter legend {
   font-weight: 700;
   font-size: 16px;
+  margin-bottom: 10px;
 }
 
-.hotels-filter li,
-.hotels-sorting li,
 .hotels li {
   padding: 10px 0;
   list-style: none;
@@ -578,36 +577,160 @@ fieldset {
   margin: 0;
   padding: 0;
 }
+
+.filters-item {
+  list-style: none;
+  margin: 20px 0;
+  padding-left: 40px;
+  /* border: 1px solid #ffffff; */
+}
+
+.filters-item label {
+  position: relative;
+  display: block;
+
+  cursor: pointer;
+}
+
+.filters-input-checkbox + label::before {
+  content: "";
+  position: absolute;
+  left: -40px;
+  top: 0;
+
+  width: 27px;
+  height: 23px;
+  
+  background-image: url("../img/checkbox-off.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.filters-input-checkbox:checked + label::before {
+  background-image: url("../img/checkbox-on.svg");
+}
+
+/* добавила от себя, но не понимаю почему фокус не работает */
+.filters-item label:hover,
+.filters-item label:focus {
+  opacity: 0.7;
+}
+
 .hotels-cost {
   width: 330px;
 }
+
 .fieldset-unit-1 {
+  position: relative;
   height: 36px;
   margin-bottom: 20px;
+
+  font-size: 0;
 
   border: 2px solid #ffffff;
   border-radius: 2px;
 }
 
-.fieldset-unit-1 input,
-.hotels-cost button {
-  color: #ffffff;
+.fieldset-unit-1::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
 
-  background-color: transparent;
-  border: none;
+  width: 2px;
+  height: 22px;
+
+  background: #ffffff;
+  transform: translate(-50%, -50%);
+}
+
+.fieldset-unit-1 label {
+  display: inline-block;
+
+  font-size: 14px;
+  line-height: 38px;
+  vertical-align: top;
+
+  cursor: pointer;
+}
+
+.fieldset-unit-1 .min-cost,
+.fieldset-unit-1 .max-cost {
+  width: 90px;
+  padding-left: 65px;
 }
 
 .fieldset-unit-1 input {
-  line-height: 21px;
+  width: 50px;
+  margin: 0;
 
-  outline: none;
+  color: inherit;
+  font: inherit;
+
+  background: none;
+  border: none;
+}
+
+.range-controls {
+  position: relative;
+
+  margin-bottom: 32px;
+}
+
+.range-controls .scale {
+  height: 2px;
+
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+
+  background: #ffffff;
+}
+
+.range-toggle {
+  position: absolute;
+  top: -9px;
+  
+  width: 4px;
+  height: 4px;
+
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+
+.range-toggle:hover {
+  background: #1c4f80;
+}
+
+.range-toggle-min {
+  left: 0;
+}
+
+.range-toggle-max {
+  left: 80%;
 }
 
 .button-show {
-  outline: 2px solid #ffffff;
+  display: block;
+  margin: 0 auto;
+  padding: 6px 35px;
 
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
   text-transform: uppercase;
-}
+
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  cursor: pointer;
+} 
 
 .button-show:hover,
 .button-show:focus {
@@ -620,7 +743,7 @@ fieldset {
   background-color: #ffffff;
 
   display: flex;
-  padding-left: 72px;
+  margin: 0 72px;
 }
 
 .sorting-result,
@@ -630,16 +753,61 @@ fieldset {
   line-height: 26px;
 }
 
+.sorting-result {
+  text-align: center;
+  
+  padding: 30px 0;
+  margin: 0 50px 0 0;
+}
+
 .sorting-list {
   font-size: 12px;
-  line-height: 18px;
+  line-height: 26px;
+  width: 889px;
+
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.hotels-sorting li {
+  list-style: none;
+}
+
+.hotels-sorting li:nth-child(3) {
+  margin-right: 50%; 
+}
+
+.hotels-sorting li:nth-child(n+4) {
+  width: 20px;
+  text-align: center;
 }
 
 .sorting-item {
   font-weight: 400;
   color: #cacaca;
   border-bottom: 1px dotted #81b3d2;
+}
+
+.sorting-item-badge {
+  border-bottom: none;
+}
+
+.sorting-item-badge:hover polyline,
+.sorting-item-badge:focus polyline,
+.sorting-item-badge:hover polygon,
+.sorting-item-badge:focus polygon {
+  fill: #231F20;
+}
+
+.sorting-item-badge:active polyline,
+.sorting-item-badge:active polygon,
+.sorting-item-active polygon,
+.sorting-item-active polyline {
+  fill: #81b3d2;
 }
 
 .active-cost {
@@ -656,8 +824,6 @@ fieldset {
   color: #000000;
   border: none;
 }
-
-/* нужно вставить треугольники и снова вопрос смены цветов при наведение и пр.*/
 
 .hotels-list {
   display: flex;
