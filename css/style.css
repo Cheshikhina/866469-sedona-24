@@ -329,8 +329,8 @@ html {
 }
 
 .user label {
-  padding-right: 15px;
   cursor: pointer;
+  padding-right: 20px;
 }
 
 .calendar {
@@ -367,9 +367,16 @@ html {
 }
 
 .user input:nth-child(n+3) {
-  width: 114px;
-  padding: 0;
+  width: 116px;
   text-align: center;
+}
+
+.user p:nth-child(3) {
+  margin: 0;
+}
+
+.user p:nth-child(4) {
+  margin-left: auto;
 }
 
 .user input:hover {
@@ -379,10 +386,6 @@ html {
 .user input:focus {
   background-color: #ffffff;
   outline: 2px solid #e5e5e5;
-}
-
-.user p:nth-child(n+3) {
-  flex-grow: 1;
 }
 
 .user p:nth-child(3) {
@@ -400,8 +403,14 @@ html {
   cursor: pointer;
 }
 
+.remove {
+  right: 90px;
+  top: -2px;
+}
+
 .add {
-  right: 10%;
+  right: 3%;
+  top: 0px;
 }
 
 .remove:hover,
@@ -552,19 +561,24 @@ html {
 
 .filters {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   min-height: 217px; 
-}
-
-fieldset:nth-child(2) {
-  margin-right: 20%;
 }
 
 fieldset {
   border: none;
-  margin: 30px auto 0;
+  margin-top: 30px;
+  margin-bottom: 0;
+  margin-left: 71px;
+  margin-right: 45px;
   padding: 0;
 }
+
+fieldset:nth-child(3n) {
+  margin-left: auto;
+  margin-right: 74px;
+}
+
 
 .hotels-filter legend {
   font-weight: 700;
@@ -587,7 +601,6 @@ fieldset {
   list-style: none;
   margin: 20px 0;
   padding-left: 40px;
-  /* border: 1px solid #ffffff; */
 }
 
 .filters-item label {
@@ -627,8 +640,9 @@ fieldset {
 
 .fieldset-unit-1 {
   position: relative;
-  height: 36px;
+  width: 314px;
   margin-bottom: 20px;
+  display: flex;
 
   font-size: 0;
 
@@ -651,17 +665,17 @@ fieldset {
 
 .fieldset-unit-1 label {
   display: inline-block;
+  vertical-align: top;
 
   font-size: 14px;
-  line-height: 38px;
-  vertical-align: top;
+  line-height: 32px;
 
   cursor: pointer;
 }
 
 .fieldset-unit-1 .min-cost,
 .fieldset-unit-1 .max-cost {
-  width: 90px;
+  width: 100%;
   padding-left: 65px;
 }
 
@@ -751,7 +765,7 @@ fieldset {
   background-color: #ffffff;
 
   display: flex;
-  margin: 0 72px;
+  margin: 0 72px ;
 }
 
 .sorting-result {
@@ -777,21 +791,26 @@ fieldset {
   justify-content: space-between;
   align-items: center;
   margin: 0;
-  padding-top: 10px;
+
+  padding-left: 0;
 }
 
 .hotels-sorting li {
   list-style: none;
+  margin-left: 33px; 
 }
 
-.hotels-sorting li:nth-child(3) {
-  margin-right: 50%; 
+.hotels-sorting li:nth-child(4) {
+  margin-left: auto; 
+}
+
+.hotels-sorting li:nth-child(5) {
+  margin-left: 13px; 
 }
 
 .hotels-sorting li:nth-child(n+4) {
-  width: 20px;
+  width: 10px;
   text-align: center;
-  margin-right: -35px;
 }
 
 .sorting-item {
@@ -846,12 +865,11 @@ fieldset {
   width: 1200px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   border-bottom: 1px solid #f2f2f2;
 }
 
 .hotel-item img {
-  margin: 20px 30px 30px 72px;
+  margin: 20px 30px 20px 72px;
 }
 
 .hotel-item-middle {
@@ -859,20 +877,22 @@ fieldset {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-}
+  align-content: flex-start;
+  }
 
 .hotel-name {
   width: 260px;
-  margin-top: 17px;
 
   font-weight: 700;
   font-size: 21px;
-  line-height: 26px;
+  line-height: 27px;
+  margin-top: 15px;
 }
 
 .hotels-type,
 .hotels-price {
   color: #333333;
+  margin-top: 5px;
 }
 
 .hotels-type {
@@ -886,6 +906,7 @@ fieldset {
 .hotels-details,
 .hotels-book {
   color: #ffffff;
+  margin-top: 15px;
 }
 
 .hotels-details {
@@ -937,10 +958,11 @@ fieldset {
   width: 110px;
   height: 27px;
   color: #666666;
-  margin-left: 522px;
-  margin-top: 97px;
+  margin-top: 83px;
+  margin-right: 73px;
   padding: 3px 13px;
   background-color: #f2f2f2;
+  margin-left: auto;
 }
 
 .star::before {
@@ -951,7 +973,7 @@ fieldset {
   background-repeat: space;
   background-size: 18px 17px;
   background-color: #ffffff;
-  right: 0px;
+  right: 73px;
 }
 
 .star-4::before {
@@ -964,12 +986,12 @@ fieldset {
   content: "";
   background-image: url("../img/invalid-name.svg");
   width: 64px;
-  top: 189px;
+  top: 183px;
 }
 
 .star-2::before {
   content: "";
   background-image: url("../img/invalid-name.svg");
   width: 40px;
-  top: 350px;
+  top: 333px;
 }
