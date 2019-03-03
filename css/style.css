@@ -6,6 +6,8 @@ body {
   line-height: 21px;
   font-weight: 400;
   text-transform: uppercase;
+
+  background-color: #f2f2f2;
 }
 /* фон с тенюхой пока не делала */
 /* определять так ссылки плохо? */
@@ -22,8 +24,8 @@ a:focus {
   outline: none
 }
 
-a:active, {
-  color: #c9c9c9;
+a:active {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 img { 
@@ -56,11 +58,12 @@ html {
 
 /* в контейнере нет position: relative, стоит ли объединять эти стили? */
 .main-header {
-  padding: 0 40px;
-  width: 1280px;
+  width: 1200px;
   margin: 0 auto;
 
   position: relative;
+  background-color: #ffffff;
+  z-index: 1;
 }
 
 .main-menu {
@@ -105,13 +108,15 @@ html {
 
 .welcome-background-main {
   text-align: center;
-  padding-top: 76px;
-  margin-bottom: 80px;
+  padding-top: 75px;
+  padding-bottom: 75px;
+  margin-bottom: 58px;
 
-  background-color: #a9a9a9;
+  background-color: #ffffff;
   background-image: url("../img/background-main.jpg");
   background-position: 0 -82px;
   background-repeat: no-repeat;
+  position: relative;
 }
 
 .welcome-background-main::after {
@@ -122,17 +127,22 @@ html {
 
   width: 1200px;
   height: 57px;
+  position: absolute;
+  bottom: 0;
 }
 
-.container {
-  padding: 0 40px;
-  width: 1280px;
+.container { 
+  width: 1200px;
   margin: 0 auto;
+
+  background-color: #ffffff;
 }
 
 .container h3 {
   font-size: 21px;
   font-weight: 700;
+  margin: 0;
+  margin-bottom: 25px;
 }
 
 .main-unit-1 p {
@@ -140,18 +150,37 @@ html {
   color: #333333;
 
   text-align: center;
-  padding-bottom: 8px;
 }
 
 .main-unit-1 p:first-child {
   font-size: 21px;
   font-weight: 700;
   color: #000000;
+  margin-bottom: 30px;
 }
 
 .main-unit-1 {
-  margin-bottom: 43px; 
+  margin-bottom: 50px; 
 }
+
+.offering-list {
+background-color: #ffffff;
+}
+
+.offering-item-img {
+  height: 76px;
+  margin-bottom: 25px;
+}
+
+.offering-item-img-food {
+  margin-top: 2px;
+  margin-bottom: 23px;
+}
+
+.offering-item-img-souvenirs {
+  margin-top: -2px;
+  margin-bottom: 27px;
+  }
 
 .advantages-list,
 .offering-list {
@@ -176,22 +205,23 @@ html {
 }
 
 .advantages-item h3 {
-  padding: 25px 30% 0;
+  padding: 0 50px;
+  margin-bottom: 25px;
+  margin-top: 0;
+  text-align: center;
 }
 
 .advantages-item p {
   position: relative;
-  padding: 45px 15% 0;
 }
 
 .advantages-item p::before {
   counter-increment: number; 
   content: "— №" counter(number) " — ";
 
-  position: absolute;
-  top: 0px;
-  left: 50%;
-  transform: translateX(-50%); 
+  
+  display: block;
+  margin-bottom: 22px;
 }
 
 .advantages-item:first-child {
@@ -217,8 +247,24 @@ html {
 .advantages-item-blue-wrapper,
 .advantages-item-gray {
   width: 400px;
-  min-height: 256px;
   text-align: center;
+  padding: 46px 50px 45px;
+}
+
+.advantages-item-gray {
+  padding: 48px 75px 45px;
+}
+
+.advantages-item-gray h3 {
+  margin-bottom: 23px;
+}
+.advantages-item-blue-wrapper-2 {
+  padding: 48px 47px 43px;
+}
+
+.advantages-item-blue-wrapper-2 h3 {
+  padding: 0px 30px;
+  margin-bottom: 23px;
 }
 
 .advantages-item-blue p {
@@ -236,7 +282,7 @@ html {
   min-height: 330px;
   text-align: center;
 
-  padding: 5% 5% 0;
+  padding: 60px 50px;
 }
 
 .search {
@@ -296,10 +342,90 @@ html {
 }
 
 .user {
+  display: none;
   background-color: #ffffff;
   position: absolute;
   width: 568px;
   min-height: 395px;
+}
+
+.user-open {
+  display: block;
+  animation-name: flipInX;
+  animation-duration: 0.6s;
+} 
+
+@-webkit-keyframes flipInX {
+  from {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  40% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  60% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1;
+  }
+
+  80% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+  }
+
+  to {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+  }
+}
+
+@keyframes flipInX {
+  from {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  40% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  60% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1;
+  }
+
+  80% {
+    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+  }
+
+  to {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+  }
+}
+
+.flipInX {
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+  -webkit-animation-name: flipInX;
+  animation-name: flipInX;
 }
 
 .user p {
@@ -449,16 +575,8 @@ html {
   background-color: #5496bd; 
 }
 
-.main-footer-1::before {
-  content: "";
-  background-image: url("../img/map.jpg");
-  width: 1200px;
-  height: 473px;
-}
-
 .main-footer {
-  padding: 0 40px;
-  width: 1280px;
+  width: 1200px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -471,20 +589,19 @@ html {
 .footer-social,
 .footer-copyright {
   width: 30%;
-  margin-top: 20px;
+  margin-top: 17px;
 }
 
 .footer-contact a {
   font-size: 21px;
   line-height: 26px;
-  margin-left: 30%;
+  margin-left: 113px;
 }
 
 .footer-social ul {
   padding: 0;
   display: flex;
-  min-width: 150px;
-  margin-left: 30%;
+  margin-left: 104px;
 }
 
 .footer-social li {
@@ -521,8 +638,8 @@ html {
   font-weight: 400;
   line-height: 26px;
   vertical-align: baseline;
-  margin-left: 80px;
-  margin-right: 10px;
+  margin-left: 82px;
+  margin-right: 4px;
 }
 
 .logo-button {
@@ -533,16 +650,16 @@ html {
   min-height: 41px;
 }
 
-.logo-button path {
-  fill: #231f20;
+.logo-button {
+  fill: inherit;
 }
 
-.logo-button:hover path,
-.logo-button:focus path {
+.logo-button:hover svg,
+.logo-button:focus svg {
   fill: #81b3d2;
 }
 
-.logo-button:active path {
+.logo-button:active svg {
   fill: #c9c7c8;
 }
 
@@ -772,6 +889,7 @@ fieldset:nth-child(3n) {
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
+  min-width: 120px;
 }
 
 .sorting-result {
@@ -779,6 +897,13 @@ fieldset:nth-child(3n) {
   
   padding: 30px 0;
   margin: 0 50px 0 0;
+}
+.sorting-heading {
+  font-size: 12px;
+  line-height: 26px;
+
+  display: flex;
+  align-items: center;
 }
 
 .sorting-list {
@@ -892,7 +1017,7 @@ fieldset:nth-child(3n) {
 .hotels-type,
 .hotels-price {
   color: #333333;
-  margin-top: 5px;
+  margin-top: 7px;
 }
 
 .hotels-type {
