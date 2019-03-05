@@ -9,7 +9,7 @@ body {
 
   background-color: #f2f2f2;
 }
-/* фон с тенюхой пока не делала */
+/* фон с тенюхой пока не делала (box-shadow: 0 0 20px 0 rgba(0,0,0,0.7);)*/
 /* определять так ссылки плохо? */
 a {
   color: #000000;
@@ -21,7 +21,7 @@ a:hover,
 a:focus {
   color: #81b3d2;
 
-  outline: none
+  outline: none;
 }
 
 a:active {
@@ -294,7 +294,7 @@ background-color: #ffffff;
 .search b {
   display: block;
  
-  margin: 50px auto 25px;
+  margin: 52px auto 25px;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
@@ -305,7 +305,7 @@ background-color: #ffffff;
   line-height: 25px;
   color: #333333;
   text-align: center;
-  margin-bottom: 45px;
+  margin-bottom: 47px;
 }
 
 .button {
@@ -353,6 +353,7 @@ background-color: #ffffff;
   display: block;
   animation-name: flipInX;
   animation-duration: 0.6s;
+  transform-origin: 50% 0;
 } 
 
 @-webkit-keyframes flipInX {
@@ -456,7 +457,7 @@ background-color: #ffffff;
 
 .user label {
   cursor: pointer;
-  padding-right: 20px;
+  padding-right: 19px;
 }
 
 .calendar {
@@ -465,8 +466,8 @@ background-color: #ffffff;
   width: 21px;
   height: 22px;
   border: none;
+  outline: none;
   background-color: transparent;
-  fill: #cacaca;
   position: absolute;
   top: 50%;
   transform: translateY(-13px);
@@ -474,13 +475,21 @@ background-color: #ffffff;
   cursor: pointer;
 }
 
-.calendar:hover,
-.calendar:focus {
+.calendar rect,
+.calendar path {
+  fill: #cacaca;
+}
+
+.calendar:hover rect,
+.calendar:focus rect,
+.calendar:hover path,
+.calendar:focus path {
   fill: #000000;
   outline: none;
 }
 
-.calendar:active {
+.calendar:active path,
+.calendar:active rect {
   fill: #81b3d2; 
 }
 
@@ -495,6 +504,10 @@ background-color: #ffffff;
 .user input:nth-child(n+3) {
   width: 116px;
   text-align: center;
+}
+
+.user .adults {
+  margin-left: 23px;
 }
 
 .user p:nth-child(3) {
@@ -514,10 +527,6 @@ background-color: #ffffff;
   outline: 2px solid #e5e5e5;
 }
 
-.user p:nth-child(3) {
-  padding-left: 0;
-}
-
 .remove,
 .add {
   position: absolute;
@@ -535,8 +544,8 @@ background-color: #ffffff;
 }
 
 .add {
-  right: 3%;
-  top: 0px;
+  right: 5px;
+  top: -1px;
 }
 
 .remove:hover,
@@ -560,7 +569,7 @@ background-color: #ffffff;
   width: 458px;
   min-height: 58px;
 
-  margin: 20px auto;
+  margin: 23px auto;
   cursor: pointer;
 }
 
@@ -577,6 +586,7 @@ background-color: #ffffff;
 
 .main-footer {
   width: 1200px;
+  min-height: 120px;
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
@@ -585,11 +595,16 @@ background-color: #ffffff;
   background-color: rgba(255, 255, 255, 0.9);
 }
 
+.main-footer-1 {
+  transform: translateY(-124px);
+  padding-top: 6px;
+}
+
 .footer-contact,
 .footer-social,
 .footer-copyright {
   width: 30%;
-  margin-top: 17px;
+  margin-top: 14px;
 }
 
 .footer-contact a {
@@ -637,7 +652,6 @@ background-color: #ffffff;
 .footer-copyright b {
   font-weight: 400;
   line-height: 26px;
-  vertical-align: baseline;
   margin-left: 82px;
   margin-right: 4px;
 }
@@ -654,12 +668,20 @@ background-color: #ffffff;
   fill: inherit;
 }
 
-.logo-button:hover svg,
-.logo-button:focus svg {
+.logo-button path,
+.logo-button rect {
+  fill: #231F20;
+}
+
+.logo-button:hover path,
+.logo-button:focus path,
+.logo-button:hover rect,
+.logo-button:focus rect {
   fill: #81b3d2;
 }
 
-.logo-button:active svg {
+.logo-button:active path,
+.logo-button:active rect {
   fill: #c9c7c8;
 }
 
@@ -751,6 +773,11 @@ fieldset:nth-child(3n) {
   opacity: 0.7;
 }
 
+.filters-input-checkbox:disabled + label {
+  opacity: 0.5;
+  color: rgba(255, 255, 255, 0.5);
+}
+
 .hotels-cost {
   width: 330px;
 }
@@ -830,18 +857,19 @@ fieldset:nth-child(3n) {
   position: absolute;
   top: -9px;
   
-  width: 4px;
-  height: 4px;
+  width: 20px;
+  height: 20px;
 
   background: #ababab;
   border: 8px solid #ffffff;
   border-radius: 50%;
-  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  box-shadow: 0 2px 1px 0 rgba(253, 253, 253, 0.2);
   cursor: pointer;
 }
 
-.range-toggle:hover {
-  background: #1c4f80;
+.range-toggle:hover,
+.range-toggle:focus {
+  transform: scale(1.2);
 }
 
 .range-toggle-min {
@@ -896,26 +924,30 @@ fieldset:nth-child(3n) {
   text-align: center;
   
   padding: 30px 0;
-  margin: 0 50px 0 0;
-}
-.sorting-heading {
-  font-size: 12px;
-  line-height: 26px;
-
-  display: flex;
-  align-items: center;
+  margin: 0 45px 0 0;
 }
 
+.sorting-heading,
 .sorting-list {
   font-size: 12px;
   line-height: 26px;
-  width: 889px;
+
+  margin: 0;
+  padding-top: 5px;
 
   display: flex;
+  align-items: center;
+}
+
+.sorting-heading {
+margin-right: 6px;
+}
+
+.sorting-list {
+  width: 889px;
+
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
-  margin: 0;
 
   padding-left: 0;
 }
@@ -1014,6 +1046,10 @@ fieldset:nth-child(3n) {
   margin-top: 15px;
 }
 
+.hotels {
+  padding-bottom: 8px;
+}
+
 .hotels-type,
 .hotels-price {
   color: #333333;
@@ -1039,7 +1075,7 @@ fieldset:nth-child(3n) {
   height: 27px;
   margin-right: 6px;
   text-align: center;
-  padding: 3px 16px;
+  padding: 2px 16px;
   background-color: #81b3d2;
 }
 
@@ -1060,7 +1096,7 @@ fieldset:nth-child(3n) {
   width: 142px;
   height: 27px;
   text-align: center;
-  padding: 3px 16px;
+  padding: 2px 16px;
   background-color: #766357;
 }
 
@@ -1083,9 +1119,9 @@ fieldset:nth-child(3n) {
   width: 110px;
   height: 27px;
   color: #666666;
-  margin-top: 83px;
-  margin-right: 73px;
-  padding: 3px 13px;
+  margin-top: 85px;
+  margin-right: 70px;
+  padding: 2px 13px;
   background-color: #f2f2f2;
   margin-left: auto;
 }
@@ -1098,25 +1134,25 @@ fieldset:nth-child(3n) {
   background-repeat: space;
   background-size: 18px 17px;
   background-color: #ffffff;
-  right: 73px;
+  right: 72px;
 }
 
 .star-4::before {
   content: "";
   background-image: url("../img/invalid-name.svg");
-  top: 28px;
+  top: 29px;
 }
 
 .star-3::before {
   content: "";
   background-image: url("../img/invalid-name.svg");
   width: 64px;
-  top: 183px;
+  top: 181px;
 }
 
 .star-2::before {
   content: "";
   background-image: url("../img/invalid-name.svg");
   width: 40px;
-  top: 333px;
+  top: 331px;
 }
