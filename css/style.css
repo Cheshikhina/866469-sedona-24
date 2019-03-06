@@ -1,6 +1,4 @@
 body {
-  margin: 0;
-  
   font-family: "PT Sans", Arial, sans-serif;
   font-size: 14px;
   line-height: 21px;
@@ -8,8 +6,12 @@ body {
   text-transform: uppercase;
 
   background-color: #f2f2f2;
+  width: 1200px;
+  margin: 0 auto;
+
+  box-shadow: 0 0 20px 0 rgba(0,0,0,0.3);
 }
-/* фон с тенюхой пока не делала (box-shadow: 0 0 20px 0 rgba(0,0,0,0.7);)*/
+
 /* определять так ссылки плохо? */
 a {
   color: #000000;
@@ -58,7 +60,6 @@ html {
 
 /* в контейнере нет position: relative, стоит ли объединять эти стили? */
 .main-header {
-  width: 1200px;
   margin: 0 auto;
 
   position: relative;
@@ -121,18 +122,17 @@ html {
 
 .welcome-background-main::after {
   content: "";
+  width: 1200px;
   background-image: url("../img/polygon-background-main.svg");
   background-size: 100% 100%;
   display: block;
 
-  width: 1200px;
   height: 57px;
   position: absolute;
   bottom: 0;
 }
 
 .container { 
-  width: 1200px;
   margin: 0 auto;
 
   background-color: #ffffff;
@@ -157,6 +157,7 @@ html {
   font-weight: 700;
   color: #000000;
   margin-bottom: 30px;
+  padding: 0 300px;
 }
 
 .main-unit-1 {
@@ -241,7 +242,6 @@ background-color: #ffffff;
 
   background-color: #81b3d2;
   display: flex;
-  width: 1200px;
 }
 
 .advantages-item-blue-wrapper,
@@ -253,6 +253,10 @@ background-color: #ffffff;
 
 .advantages-item-gray {
   padding: 48px 75px 45px;
+}
+
+.advantages-item:nth-child(4) {
+  padding: 48px 65px 45px;
 }
 
 .advantages-item-gray h3 {
@@ -294,7 +298,7 @@ background-color: #ffffff;
 .search b {
   display: block;
  
-  margin: 52px auto 25px;
+  margin: 52px auto 23px;
   font-weight: 700;
   font-size: 30px;
   line-height: 36px;
@@ -305,7 +309,7 @@ background-color: #ffffff;
   line-height: 25px;
   color: #333333;
   text-align: center;
-  margin-bottom: 47px;
+  margin-bottom: 45px;
 }
 
 .button {
@@ -346,11 +350,13 @@ background-color: #ffffff;
   background-color: #ffffff;
   position: absolute;
   width: 568px;
-  min-height: 395px;
 }
 
 .user-open {
-  display: block;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 55px 50px;
+  text-align: left;
   animation-name: flipInX;
   animation-duration: 0.6s;
   transform-origin: 50% 0;
@@ -430,34 +436,29 @@ background-color: #ffffff;
 }
 
 .user p {
-  position: relative;
-}
-
-.user-input-fields {
+  margin: 0;
+  margin-bottom: 28px;
   display: flex;
-  flex-wrap: wrap;
-  margin: 55px 55px 0;
-}
-
-.user-input-fields p {
-  margin-bottom: 30px;
-  margin-top: 0; 
-  justify-content: space-between;
-  margin-left: auto;
+  align-items: center;
+  position: relative;
 }
 
 .user label,
 .user input {
-  min-height: 38px;
-
-  line-height: 26px;
+  line-height: 38px;
   font-weight: 700;
   color: #000000;
 }
 
 .user label {
   cursor: pointer;
-  padding-right: 19px;
+  margin-right: 11px;
+  letter-spacing: 0.2px;
+  width: 105px;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 38px;
+  padding-left: 0px;
 }
 
 .calendar {
@@ -496,26 +497,34 @@ background-color: #ffffff;
 .user input {
   background-color: #f2f2f2;
   border: none;
-  width: 340px;
-
+  width: 347px;
   text-transform: uppercase;
+  padding-left: 7px;
 }
 
-.user input:nth-child(n+3) {
-  width: 116px;
-  text-align: center;
+.user-unit-1 {
+  display: flex;
+  justify-content: space-between;
+}
+.user-unit-1 p {
+  margin-right: 50px;
+  margin-bottom: 52px;
 }
 
-.user .adults {
-  margin-left: 23px;
-}
-
-.user p:nth-child(3) {
+.user-unit-1 label {
   margin: 0;
+  margin-right: 11px;
+  text-align: start;
+  padding: 0 5px;
 }
 
-.user p:nth-child(4) {
-  margin-left: auto;
+.child label {
+  width: 56px;
+}
+
+.user-unit-1 input {
+  width: 115px;
+  text-align: center;
 }
 
 .user input:hover {
@@ -539,13 +548,13 @@ background-color: #ffffff;
 }
 
 .remove {
-  right: 90px;
-  top: -2px;
+  right: 85px;
+  top: 0px;
 }
 
 .add {
-  right: 5px;
-  top: -1px;
+  right: 4px;
+  top: 0;
 }
 
 .remove:hover,
@@ -569,7 +578,7 @@ background-color: #ffffff;
   width: 458px;
   min-height: 58px;
 
-  margin: 23px auto;
+  margin: 0 auto;
   cursor: pointer;
 }
 
@@ -585,7 +594,6 @@ background-color: #ffffff;
 }
 
 .main-footer {
-  width: 1200px;
   min-height: 120px;
   margin: 0 auto;
   display: flex;
@@ -596,8 +604,10 @@ background-color: #ffffff;
 }
 
 .main-footer-1 {
-  transform: translateY(-124px);
+  margin-top: -124px;
   padding-top: 6px;
+  z-index: 2;
+  position: relative;
 }
 
 .footer-contact,
@@ -616,6 +626,7 @@ background-color: #ffffff;
 .footer-social ul {
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
   margin-left: 104px;
 }
 
@@ -623,6 +634,7 @@ background-color: #ffffff;
   list-style: none;
   justify-content: center;
   margin-right: 6px;
+  margin-bottom: 6px;
 }
 
 .social-button {
@@ -694,6 +706,7 @@ background-color: #ffffff;
 
   background-color: rgba(0, 1, 1, 0.2);
   background-image: url("../img/background-hotels.jpg");
+  background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -869,7 +882,7 @@ fieldset:nth-child(3n) {
 
 .range-toggle:hover,
 .range-toggle:focus {
-  transform: scale(1.2);
+  transform: scale(1.2);        
 }
 
 .range-toggle-min {
@@ -1129,7 +1142,7 @@ margin-right: 6px;
 .star::before {
   position: absolute;
   display: block;
-  width: 89px;
+  width: 88px;
   height: 17px;
   background-repeat: space;
   background-size: 18px 17px;
