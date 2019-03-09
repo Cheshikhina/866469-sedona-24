@@ -4,15 +4,12 @@ body {
   line-height: 21px;
   font-weight: 400;
   text-transform: uppercase;
-
   background-color: #f2f2f2;
   width: 1200px;
   margin: 0 auto;
-
-  box-shadow: 0 0 20px 0 rgba(0,0,0,0.3);
+  box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
 }
 
-/* определять так ссылки плохо? */
 a {
   color: #000000;
   font-weight: 700;
@@ -22,7 +19,6 @@ a {
 a:hover,
 a:focus {
   color: #81b3d2;
-
   outline: none;
 }
 
@@ -30,29 +26,26 @@ a:active {
   color: rgba(0, 0, 0, 0.3);
 }
 
-img { 
-  max-width: 100%; 
+img {
+  max-width: 100%;
 }
 
-html { 
-  box-sizing: border-box; 
+html {
+  box-sizing: border-box;
 }
 
-*, *::before, *::after { 
-  box-sizing: inherit; 
+*, *::before, *::after {
+  box-sizing: inherit;
 }
 
 .visually-hidden {
   position: absolute;
-
   width: 1px;
   height: 1px;
   margin: -1px;
   border: 0;
   padding: 0;
-
   white-space: nowrap;
-
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
@@ -61,7 +54,6 @@ html {
 /* в контейнере нет position: relative, стоит ли объединять эти стили? */
 .main-header {
   margin: 0 auto;
-
   position: relative;
   background-color: #ffffff;
   z-index: 1;
@@ -71,7 +63,6 @@ html {
   padding: 0;
   margin: 0;
   list-style: none;
-
   display: flex;
   flex-wrap: wrap;
 }
@@ -81,16 +72,20 @@ html {
   text-align: center;
   line-height: 26px;
   padding: 15px 0;
+  letter-spacing: 0.1px;
 }
 
 .menu-list:nth-child(3) {
   margin-left: 20%;
 }
 
+.menu-list:nth-child(4) {
+  padding-left: 18px;
+}
+
 .main-menu:hover,
 .main-menu:focus {
   color: #81b3d2;
-
   outline: none;
 }
 
@@ -100,10 +95,8 @@ html {
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
-
   width: 244px;
   height: 56px;
-
   overflow: visible;
 }
 
@@ -112,7 +105,6 @@ html {
   padding-top: 75px;
   padding-bottom: 75px;
   margin-bottom: 58px;
-
   background-color: #ffffff;
   background-image: url("../img/background-main.jpg");
   background-position: 0 -82px;
@@ -126,15 +118,13 @@ html {
   background-image: url("../img/polygon-background-main.svg");
   background-size: 100% 100%;
   display: block;
-
   height: 57px;
   position: absolute;
   bottom: 0;
 }
 
-.container { 
+.container {
   margin: 0 auto;
-
   background-color: #ffffff;
 }
 
@@ -148,7 +138,6 @@ html {
 .main-unit-1 p {
   line-height: 26px;
   color: #333333;
-
   text-align: center;
 }
 
@@ -161,11 +150,11 @@ html {
 }
 
 .main-unit-1 {
-  margin-bottom: 50px; 
+  margin-bottom: 50px;
 }
 
 .offering-list {
-background-color: #ffffff;
+  background-color: #ffffff;
 }
 
 .offering-item-img {
@@ -181,7 +170,7 @@ background-color: #ffffff;
 .offering-item-img-souvenirs {
   margin-top: -2px;
   margin-bottom: 27px;
-  }
+}
 
 .advantages-list,
 .offering-list {
@@ -197,11 +186,9 @@ background-color: #ffffff;
 .advantages-list {
   margin: 0;
   background-color: #eeeeee;
-  
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-
   counter-reset: number;
 }
 
@@ -217,10 +204,8 @@ background-color: #ffffff;
 }
 
 .advantages-item p::before {
-  counter-increment: number; 
+  counter-increment: number;
   content: "— №" counter(number) " — ";
-
-  
   display: block;
   margin-bottom: 22px;
 }
@@ -239,7 +224,6 @@ background-color: #ffffff;
 
 .advantages-item-blue {
   color: #ffffff;
-
   background-color: #81b3d2;
   display: flex;
 }
@@ -249,6 +233,13 @@ background-color: #ffffff;
   width: 400px;
   text-align: center;
   padding: 46px 50px 45px;
+}
+
+.advantages-item-blue-img img {
+  display: block;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .advantages-item-gray {
@@ -262,6 +253,7 @@ background-color: #ffffff;
 .advantages-item-gray h3 {
   margin-bottom: 23px;
 }
+
 .advantages-item-blue-wrapper-2 {
   padding: 48px 47px 43px;
 }
@@ -277,7 +269,7 @@ background-color: #ffffff;
 
 .offering-list {
   display: flex;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
   justify-content: space-around;
 }
 
@@ -285,7 +277,6 @@ background-color: #ffffff;
   width: 400px;
   min-height: 330px;
   text-align: center;
-
   padding: 60px 50px;
 }
 
@@ -297,7 +288,6 @@ background-color: #ffffff;
 
 .search b {
   display: block;
- 
   margin: 52px auto 23px;
   font-weight: 700;
   font-size: 30px;
@@ -317,16 +307,13 @@ background-color: #ffffff;
   line-height: 26px;
   font-weight: 700;
   color: #ffffff;
-
   border: none;
-
   text-transform: uppercase;
 }
 
 .hotel-search {
   background-color: #766357;
   display: block;
-
   width: 568px;
   min-height: 86px;
   cursor: pointer;
@@ -335,13 +322,11 @@ background-color: #ffffff;
 .hotel-search:hover,
 .hotel-search:focus {
   background-color: #604e43;
-
   outline: none;
 }
 
 .hotel-search:active {
   color: rgba(255, 255, 255, 0.3);
-
   background-color: #503e33;
 }
 
@@ -360,71 +345,71 @@ background-color: #ffffff;
   animation-name: flipInX;
   animation-duration: 0.6s;
   transform-origin: 50% 0;
-} 
+}
 
 @-webkit-keyframes flipInX {
   from {
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
-    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-    opacity: 0;
+      -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+      transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+      opacity: 0;
   }
 
   40% {
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
-    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
+      -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+      transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
   }
 
   60% {
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
-    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
-    opacity: 1;
+      -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+      transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+      opacity: 1;
   }
 
   80% {
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
-    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+      -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+      transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
   }
 
   to {
-    -webkit-transform: perspective(400px);
-    transform: perspective(400px);
+      -webkit-transform: perspective(400px);
+      transform: perspective(400px);
   }
 }
 
 @keyframes flipInX {
   from {
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
-    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
-    opacity: 0;
+      -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+      transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
+      opacity: 0;
   }
 
   40% {
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
-    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
-    -webkit-animation-timing-function: ease-in;
-    animation-timing-function: ease-in;
+      -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+      transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+      -webkit-animation-timing-function: ease-in;
+      animation-timing-function: ease-in;
   }
 
   60% {
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
-    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
-    opacity: 1;
+      -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+      transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+      opacity: 1;
   }
 
   80% {
-    -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
-    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+      -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+      transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
   }
 
   to {
-    -webkit-transform: perspective(400px);
-    transform: perspective(400px);
+      -webkit-transform: perspective(400px);
+      transform: perspective(400px);
   }
 }
 
@@ -491,7 +476,7 @@ background-color: #ffffff;
 
 .calendar:active path,
 .calendar:active rect {
-  fill: #81b3d2; 
+  fill: #81b3d2;
 }
 
 .user input {
@@ -506,6 +491,7 @@ background-color: #ffffff;
   display: flex;
   justify-content: space-between;
 }
+
 .user-unit-1 p {
   margin-right: 50px;
   margin-bottom: 52px;
@@ -543,7 +529,7 @@ background-color: #ffffff;
   font-weight: 700;
   color: #a9a9a9;
   min-height: 38px;
-  outline: none; 
+  outline: none;
   cursor: pointer;
 }
 
@@ -572,12 +558,9 @@ background-color: #ffffff;
 .search-button {
   display: block;
   background-color: #81b3d2;
-
   outline: none;
-
   width: 458px;
   min-height: 58px;
-
   margin: 0 auto;
   cursor: pointer;
 }
@@ -589,8 +572,7 @@ background-color: #ffffff;
 
 .search-button:active {
   color: #95b9d1;
-
-  background-color: #5496bd; 
+  background-color: #5496bd;
 }
 
 .main-footer {
@@ -643,13 +625,12 @@ background-color: #ffffff;
   justify-content: center;
   width: 46px;
   height: 48px;
-
   background-color: #81b3d2;
   outline: none;
 }
 
 .social-button:hover, 
-.social-button:focus { 
+.social-button:focus {
   background-color: #669ec0;
 }
 
@@ -659,6 +640,10 @@ background-color: #ffffff;
 
 .social-button:active path {
   fill: rgba(255, 255, 255, 0.3);
+}
+
+.footer-copyright {
+  overflow: hidden;
 }
 
 .footer-copyright b {
@@ -671,8 +656,8 @@ background-color: #ffffff;
 .logo-button {
   display: inline-block;
   vertical-align: middle;
-  background-color: transparent; 
-  width: 115px; 
+  background-color: transparent;
+  width: 115px;
   min-height: 41px;
 }
 
@@ -703,7 +688,6 @@ background-color: #ffffff;
 
 .hotels-filter {
   color: #ffffff;
-
   background-color: rgba(0, 1, 1, 0.2);
   background-image: url("../img/background-hotels.jpg");
   background-size: 100%;
@@ -713,28 +697,31 @@ background-color: #ffffff;
 
 .filters {
   display: flex;
-  /* justify-content: space-between; */
-  min-height: 217px; 
+/* justify-content: space-between; */
+  min-height: 217px;
 }
 
 fieldset {
   border: none;
-  margin-top: 30px;
+  margin-top: 27px;
   margin-bottom: 0;
-  margin-left: 71px;
-  margin-right: 45px;
+  margin-left: 72px;
+  margin-right: 47px;
   padding: 0;
 }
 
 fieldset:nth-child(3n) {
   margin-left: auto;
-  margin-right: 74px;
+  margin-right: 72px;
 }
-
 
 .hotels-filter legend {
   font-weight: 700;
   font-size: 16px;
+  margin-bottom: 25px;
+}
+
+.hotels-cost legend {
   margin-bottom: 10px;
 }
 
@@ -751,14 +738,13 @@ fieldset:nth-child(3n) {
 
 .filters-item {
   list-style: none;
-  margin: 20px 0;
+  margin-bottom: 25px;
   padding-left: 40px;
 }
 
 .filters-item label {
   position: relative;
   display: block;
-
   cursor: pointer;
 }
 
@@ -767,10 +753,8 @@ fieldset:nth-child(3n) {
   position: absolute;
   left: -40px;
   top: 0;
-
   width: 27px;
   height: 23px;
-  
   background-image: url("../img/checkbox-off.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -780,9 +764,11 @@ fieldset:nth-child(3n) {
   background-image: url("../img/checkbox-on.svg");
 }
 
+.filters-input-checkbox:focus + label {
+  opacity: 0.7;
+}
 /* добавила от себя, но не понимаю почему фокус не работает */
-.filters-item label:hover,
-.filters-item label:focus {
+.filters-item label:hover {
   opacity: 0.7;
 }
 
@@ -791,18 +777,12 @@ fieldset:nth-child(3n) {
   color: rgba(255, 255, 255, 0.5);
 }
 
-.hotels-cost {
-  width: 330px;
-}
-
 .fieldset-unit-1 {
   position: relative;
-  width: 314px;
+  width: 317px;
   margin-bottom: 20px;
   display: flex;
-
   font-size: 0;
-
   border: 2px solid #ffffff;
   border-radius: 2px;
 }
@@ -812,10 +792,8 @@ fieldset:nth-child(3n) {
   position: absolute;
   top: 50%;
   left: 50%;
-
   width: 2px;
   height: 22px;
-
   background: #ffffff;
   transform: translate(-50%, -50%);
 }
@@ -823,66 +801,62 @@ fieldset:nth-child(3n) {
 .fieldset-unit-1 label {
   display: inline-block;
   vertical-align: top;
-
   font-size: 14px;
   line-height: 32px;
-
   cursor: pointer;
 }
 
-.fieldset-unit-1 .min-cost,
-.fieldset-unit-1 .max-cost {
+.fieldset-unit-1 .min-cost {
   width: 100%;
   padding-left: 65px;
+}
+
+.fieldset-unit-1 .max-cost {
+  width: 100%;
+  padding-left: 50px;
 }
 
 .fieldset-unit-1 input {
   width: 50px;
   margin: 0;
-
   color: inherit;
   font: inherit;
-
   background: none;
   border: none;
 }
 
 .range-controls {
   position: relative;
-
-  margin-bottom: 32px;
+  margin-bottom: 30px;
 }
 
 .range-controls .scale {
   height: 2px;
-
   background: rgba(255, 255, 255, 0.3);
 }
 
 .range-controls .bar {
   width: 80%;
   height: 2px;
-
   background: #ffffff;
 }
 
 .range-toggle {
   position: absolute;
   top: -9px;
-  
   width: 20px;
   height: 20px;
-
   background: #ababab;
   border: 8px solid #ffffff;
   border-radius: 50%;
   box-shadow: 0 2px 1px 0 rgba(253, 253, 253, 0.2);
   cursor: pointer;
+  outline: none;
 }
 
 .range-toggle:hover,
 .range-toggle:focus {
-  transform: scale(1.2);        
+  transform: scale(1.2);
 }
 
 .range-toggle-min {
@@ -895,35 +869,31 @@ fieldset:nth-child(3n) {
 
 .button-show {
   display: block;
-  margin: 0 auto;
+  margin-left: 83px;
   padding: 6px 35px;
-
   font-size: 14px;
   line-height: 20px;
   color: #ffffff;
   text-transform: uppercase;
-
   background: transparent;
   border: 2px solid #ffffff;
   border-radius: 2px;
   cursor: pointer;
-} 
+}
 
 .button-show:hover,
 .button-show:focus,
 .fieldset-unit-1 input:hover,
 .fieldset-unit-1 input:focus {
   color: #424242;
-
   background-color: #ffffff;
   outline: none;
 }
 
 .hotels-sorting {
   background-color: #ffffff;
-
   display: flex;
-  margin: 0 72px ;
+  margin: 0 70px;
 }
 
 .sorting-result {
@@ -935,47 +905,43 @@ fieldset:nth-child(3n) {
 
 .sorting-result {
   text-align: center;
-  
   padding: 30px 0;
-  margin: 0 45px 0 0;
+  margin: 0 46px 0 0;
 }
 
 .sorting-heading,
 .sorting-list {
   font-size: 12px;
   line-height: 26px;
-
   margin: 0;
   padding-top: 5px;
-
   display: flex;
   align-items: center;
 }
 
 .sorting-heading {
-margin-right: 6px;
+  margin-right: 6px;
 }
 
 .sorting-list {
   width: 889px;
-
   flex-wrap: wrap;
   justify-content: space-between;
-
   padding-left: 0;
 }
 
 .hotels-sorting li {
   list-style: none;
-  margin-left: 33px; 
+  margin-left: 33px;
 }
 
 .hotels-sorting li:nth-child(4) {
-  margin-left: auto; 
+  margin-left: auto;
 }
 
 .hotels-sorting li:nth-child(5) {
-  margin-left: 13px; 
+  margin-left: 13px;
+  margin-right: 3px;
 }
 
 .hotels-sorting li:nth-child(n+4) {
@@ -1048,15 +1014,15 @@ margin-right: 6px;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-content: flex-start;
-  }
+}
 
 .hotel-name {
   width: 260px;
-
   font-weight: 700;
   font-size: 21px;
   line-height: 27px;
   margin-top: 15px;
+  letter-spacing: 0.2px;
 }
 
 .hotels {
@@ -1095,14 +1061,12 @@ margin-right: 6px;
 .hotels-details:hover,
 .hotels-details:focus {
   color: #ffffff;
-
   background-color: #669ec0;
 }
 
 .hotels-details:active {
   color: #95b9d1;
-
-  background-color: #5496bd; 
+  background-color: #5496bd;
 }
 
 .hotels-book {
@@ -1116,15 +1080,12 @@ margin-right: 6px;
 .hotels-book:hover,
 .hotels-book:focus {
   color: #ffffff;
-
   background-color: #604e43;
-
   outline: none
 }
 
 .hotels-book:active {
   color: rgba(255, 255, 255, 0.3);
-
   background-color: #503e33;
 }
 
