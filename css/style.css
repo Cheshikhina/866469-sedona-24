@@ -940,11 +940,11 @@ html {
     border-bottom: none;
 }
 
-.sorting-item-badge:hover polyline, .sorting-item-badge:focus polyline, .sorting-item-badge:hover polygon, .sorting-item-badge:focus polygon {
+.sorting-item-badge:hover polyline, .sorting-item-badge:focus polyline {
     fill: #231F20;
 }
 
-.sorting-item-badge:active polyline, .sorting-item-badge:active polygon, .sorting-item-active polygon, .sorting-item-active polyline {
+.sorting-item-badge:active polyline, .sorting-item-active polyline {
     fill: #81b3d2;
 }
 
