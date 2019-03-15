@@ -159,16 +159,15 @@ html {
 
 .offering-item-img {
     height: 76px;
-    margin-bottom: 25px;
+    margin-bottom: 24px;
 }
 
 .offering-item-img-food {
-    margin-top: 2px;
     margin-bottom: 23px;
 }
 
 .offering-item-img-souvenirs {
-    margin-top: -2px;
+    margin-top: -4px;
     margin-bottom: 27px;
 }
 
@@ -233,6 +232,10 @@ html {
     padding: 46px 50px 45px;
 }
 
+.advantages-item-blue-wrapper {
+    padding: 47px 50px 45px;
+}
+
 .advantages-item-blue-img img {
     display: block;
     height: 100%;
@@ -241,11 +244,11 @@ html {
 }
 
 .advantages-item-gray {
-    padding: 48px 75px 45px;
+    padding: 46px 75px 45px;
 }
 
 .advantages-item:nth-child(4) {
-    padding: 48px 65px 45px;
+    padding: 46px 65px 45px;
 }
 
 .advantages-item-gray h3 {
@@ -253,7 +256,7 @@ html {
 }
 
 .advantages-item-blue-wrapper-2 {
-    padding: 48px 47px 43px;
+    padding: 46px 47px 43px;
 }
 
 .advantages-item-blue-wrapper-2 h3 {
@@ -298,7 +301,7 @@ html {
     color: #333333;
     text-align: center;
     margin-top: 0;
-    margin-bottom: 45px;
+    margin-bottom: 46px;
 }
 
 .button {
@@ -482,10 +485,12 @@ html {
 .user-unit-1 {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    width: 568px;
 }
 
 .user-unit-1 p {
-    margin-right: 50px;
+    margin-right: 5px;
     margin-bottom: 52px;
 }
 
@@ -493,11 +498,15 @@ html {
     margin: 0;
     margin-right: 11px;
     text-align: start;
-    padding: 0 5px;
+    padding: 0 5px 0 3px;
 }
 
 .child label {
     width: 56px;
+}
+
+.child input, .adults input {
+    padding-left: 3px;
 }
 
 .user-unit-1 input {
@@ -525,12 +534,12 @@ html {
 }
 
 .remove {
-    right: 85px;
+    right: 83px;
     top: 0px;
 }
 
 .add {
-    right: 4px;
+    right: 7px;
     top: 0;
 }
 
@@ -900,10 +909,6 @@ html {
     flex-wrap: wrap;
     justify-content: space-between;
     padding-left: 0;
-}
-
-.sorting-list a {
-    cursor: pointer;
 }
 
 .hotels-sorting li {
