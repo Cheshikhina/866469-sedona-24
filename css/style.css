@@ -1059,32 +1059,41 @@ html {
     background-color: #503e33;
 }
 
+.hotel-item-right {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: 70px;
+    flex-direction: column;
+}
+
 .hotels-rank {
     width: 110px;
     height: 27px;
     color: #666666;
-    margin-top: 85px;
-    margin-right: 70px;
     padding: 2px 13px;
     background-color: #f2f2f2;
-    margin-left: auto;
+}
+
+.star {
+    margin-top: 20px;
+    margin-bottom: 47px;
 }
 
 .star::before {
-    position: absolute;
     display: block;
     width: 88px;
     height: 17px;
     background-repeat: space;
     background-size: 18px 17px;
     background-color: #ffffff;
-    right: 72px;
 }
 
 .star-4::before {
     content: "";
     background-image: url("../img/invalid-name.svg");
     top: 29px;
+    margin-left: 20px;
 }
 
 .star-3::before {
@@ -1092,6 +1101,7 @@ html {
     background-image: url("../img/invalid-name.svg");
     width: 64px;
     top: 181px;
+    margin-left: 45px;
 }
 
 .star-2::before {
@@ -1099,4 +1109,5 @@ html {
     background-image: url("../img/invalid-name.svg");
     width: 40px;
     top: 331px;
+    margin-left: 68px;
 }
