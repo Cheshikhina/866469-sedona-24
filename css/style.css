@@ -260,7 +260,7 @@ html {
 }
 
 .advantages-item-blue-wrapper-2 h3 {
-    padding: 0px 30px;
+    padding: 0 30px;
     margin-bottom: 23px;
 }
 
@@ -443,7 +443,7 @@ html {
     display: inline-block;
     vertical-align: middle;
     line-height: 38px;
-    padding-left: 0px;
+    padding-left: 0;
 }
 
 .calendar {
@@ -535,7 +535,7 @@ html {
 
 .remove {
     right: 83px;
-    top: 0px;
+    top: 0;
 }
 
 .add {
@@ -866,7 +866,7 @@ html {
     cursor: pointer;
 }
 
-.button-show:hover, .button-show:focus, .fieldset-unit-1 input:hover, .fieldset-unit-1 input:focus {
+.button-show:hover, .button-show:focus {
     color: #424242;
     background-color: #ffffff;
     outline: none;
