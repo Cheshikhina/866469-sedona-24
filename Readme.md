@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Дарья Чешихина](https://up.htmlacademy.ru/htmlcss/24/user/866469).
-* Наставник: [Дмитрий Мирошниченко](https://htmlacademy.ru/profile/id591417).
+** Наставник: [Дмитрий Мирошниченко](https://htmlacademy.ru/profile/id591417).
 
 ---
 
